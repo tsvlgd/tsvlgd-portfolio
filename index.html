@@ -20,7 +20,8 @@
 <body>
   <div class="page-container">
     <!-- Top Navigation -->
-    <nav class="top-navbar">
+    <div class="top-navbar-wrapper">
+      <nav class="top-navbar">
       <div class="logo">MA_</div>
       <ul class="nav-links">
         <li><button class="nav-link active" data-nav-link>About</button></li>
@@ -44,7 +45,8 @@
       <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
-    </nav>
+      </nav>
+    </div>
 
     <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobile-drawer">
@@ -63,36 +65,25 @@
       <!-- ABOUT (HOMEPAGE) -->
       <article class="page-section active" data-page="about">
         
+        <!-- Hero Profile / Terminal -->
         <div class="hero-grid">
-          <!-- Profile Card -->
+          <!-- Profile Block -->
           <aside class="profile-card">
-            <figure class="profile-img-box" id="avatar-flip-box">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam">
-                </div>
-                <div class="flip-back">
-                  <img src="./assets/images/my-avatar.png" alt="Mehfooj Avatar">
-                </div>
-              </div>
+            <figure class="profile-img-box">
+              <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam">
             </figure>
             <div class="profile-info">
               <h1 class="profile-name">Mehfooj Alam</h1>
-              <p class="profile-role">AI Engineer</p>
+              <p class="profile-title">AI Engineer</p>
               <p class="profile-location"><ion-icon name="location-outline"></ion-icon> Gurgaon, India</p>
+              <ul class="profile-socials">
+                <li><a href="https://github.com/tsvlgd" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+                <li><a href="https://twitter.com/Mehfooj194108" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="mailto:ml.mehfooj@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+              </ul>
             </div>
-            <ul class="profile-socials">
-              <li><a href="https://github.com/tsvlgd" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-              <li><a href="https://twitter.com/Mehfooj194108" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
-              <li><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-              <li>
-                <button class="copy-email-btn" onclick="navigator.clipboard.writeText('ml.mehfooj@gmail.com'); const icon = this.querySelector('ion-icon'); icon.name='checkmark-outline'; setTimeout(() => icon.name='mail-outline', 2000);">
-                  <ion-icon name="mail-outline"></ion-icon>
-                </button>
-              </li>
-            </ul>
           </aside>
-
           <!-- Terminal Hero Card -->
           <section class="hero-terminal">
             <div class="terminal-content">
@@ -121,12 +112,16 @@
                 <div class="work-card-header">
                   <img src="./assets/images/aigeeks.png" alt="AiGeeks Logo">
                   <div class="work-card-body">
-                    <h4>AiGeeks</h4>
-                    <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                    <div class="work-card-title-row">
+                      <h4>AiGeeks</h4>
+                      <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                    </div>
                     <p class="work-card-role">Software Engineer Intern</p>
                   </div>
                 </div>
-                <span class="work-card-date">May 2026 — Present</span>
+                <div class="work-card-meta">
+                  <span class="work-card-date">May 2026 — Present</span>
+                </div>
               </div>
               <div class="work-card-expanded">
                 <p class="work-description">Building production-grade OSINT platform focused on entity intelligence and cross-source aggregation.</p>
@@ -142,12 +137,16 @@
                 <div class="work-card-header">
                   <img src="./assets/images/flyrank-ai.png" alt="FlyRank Logo">
                   <div class="work-card-body">
-                    <h4>FlyRank</h4>
-                    <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                    <div class="work-card-title-row">
+                      <h4>FlyRank</h4>
+                      <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                    </div>
                     <p class="work-card-role">Backend AI Engineering Fellow</p>
                   </div>
                 </div>
-                <span class="work-card-date">Jul 2026 — Present</span>
+                <div class="work-card-meta">
+                  <span class="work-card-date">Jul 2026 — Present</span>
+                </div>
               </div>
               <div class="work-card-expanded">
                 <p class="work-description">Developing RAG, tool-calling, and agent-based workflows with evaluation pipelines.</p>
@@ -163,11 +162,15 @@
                 <div class="work-card-header">
                   <img src="./assets/images/kulturehire.jpeg" alt="KultureHire Logo">
                   <div class="work-card-body">
-                    <h4>Data Analytics</h4>
+                    <div class="work-card-title-row">
+                      <h4>Data Analytics</h4>
+                    </div>
                     <p class="work-card-role">KultureHire & Analytics</p>
                   </div>
                 </div>
-                <span class="work-card-date">Mar 2025 — Jun 2025</span>
+                <div class="work-card-meta">
+                  <span class="work-card-date">Mar 2025 — Jun 2025</span>
+                </div>
               </div>
               <div class="work-card-expanded">
                 <p class="work-description">Building dashboards, performing analytics, and managing data projects.</p>
@@ -180,11 +183,15 @@
                 <div class="work-card-header">
                   <img src="./assets/images/hacktoberfest.jpeg" alt="Open Source Logo">
                   <div class="work-card-body">
-                    <h4>Open Source</h4>
+                    <div class="work-card-title-row">
+                      <h4>Open Source</h4>
+                    </div>
                     <p class="work-card-role">Contributions & Hackathons</p>
                   </div>
                 </div>
-                <span class="work-card-date">2023 — Present</span>
+                <div class="work-card-meta">
+                  <span class="work-card-date">2023 — Present</span>
+                </div>
               </div>
               <div class="work-card-expanded">
                 <p class="work-description">Merged PRs, generated OSS impact, and engaged with developer communities.</p>

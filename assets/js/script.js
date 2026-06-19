@@ -123,25 +123,24 @@ function animateBorder() {
 
 animateBorder();
 
-/* ---------- THEME TOGGLE ---------- */
-const themeBtn = document.getElementById("theme-toggle-btn");
-const currentTheme = localStorage.getItem("theme") || "dark";
-
-if (currentTheme === "light") {
-  document.body.setAttribute("data-theme", "light");
-}
-
+/* ---------- Theme Toggle ---------- */
+const themeBtn = document.querySelector("[data-theme-btn]") || document.getElementById("theme-toggle-btn");
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
-    const isLight = document.body.getAttribute("data-theme") === "light";
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
     if (isLight) {
-      document.body.removeAttribute("data-theme");
+      document.documentElement.removeAttribute("data-theme");
       localStorage.setItem("theme", "dark");
     } else {
-      document.body.setAttribute("data-theme", "light");
+      document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
     }
   });
+}
+
+// Initial Theme Check
+if (localStorage.getItem("theme") === "light") {
+  document.documentElement.setAttribute("data-theme", "light");
 }
 
 /* ---------- AVATAR FLIP ---------- */

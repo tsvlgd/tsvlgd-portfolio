@@ -6,11 +6,10 @@ Successfully implemented a high-fidelity information architecture redesign of th
 ## Core Adjustments Made
 1. **Homepage Redesign**:
    - Replaced vertical sections with a `Hero Terminal` and `Profile Card` side-by-side layout using CSS Grid (`grid-template-columns: 320px 1fr`).
-   - Integrated an interactive `Experience` card stack to replace "What I'm Doing". Implemented JS-driven accordion logic so that cards expand on hover (desktop) or tap (mobile) ensuring only one card is expanded at a time. The first card is expanded by default.
+   - Integrated an interactive `Experience` card stack to replace "What I'm Doing". Hover expands cards sequentially as requested to reveal the description and tech stack.
 2. **Resume Refactor**:
    - Reverted the resume page back from the temporary accordion style to its original visual timeline list, keeping `timeline-list`, `timeline-item`, and left-border indicators.
    - Preserved and injected Devicon-based Tech Stack icons and Working badges specifically tailored for the timeline logic.
-   - Fixed the `Resume PDF` button in the Hero section to trigger a download for `assets/resume.pdf`.
 3. **Typography & Styling**:
    - Implemented `var(--font-mono)` consistently across the terminal block and data points.
    - Refined Dark Mode theme colors to rely strictly on graphite/black/white monochrome. Green `var(--working-green)` is preserved strictly for the `> whoami` prompt and the `.working` badge dots, removing it from default `accent-color` bindings to eliminate the cyberpunk aesthetic.
@@ -20,9 +19,8 @@ Successfully implemented a high-fidelity information architecture redesign of th
    - Implemented an elegant, auto-rotating quote card directly below the Experience section on the homepage, perfectly styled to match the `ramx.in` reference provided.
    - Integrated JavaScript logic to seamlessly fade transition between an array of user-specified quotes every 6 seconds.
 6. **Navigation Component**:
-   - Implemented a sticky navbar with glassmorphism (backdrop-blur, semi-transparent background) and a subtle bottom border.
-   - Completely removed the duplicate floating `Ctrl+K` button from the bottom of the page, ensuring only the primary navbar search button exists and correctly triggers the command palette.
-   - Fixed Light Mode navigation visibility and styled the search button to perfectly match the theme-aware aesthetic.
+   - Re-instated the missing `Ctrl + K` floating search button beside the theme toggler to preserve high-contrast visibility.
+   - Fixed Light Mode navigation visibility.
 7. **Mobile Responsiveness**:
    - Enforced single-column layouts for `max-width: 1024px` breakpoints.
    - Prevented horizontal scrolling overflow with `flex-direction: column` and hidden inner content layers.
