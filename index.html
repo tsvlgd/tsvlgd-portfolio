@@ -34,6 +34,12 @@
             <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
           </button>
         </li>
+        <li>
+          <button class="navbar-search-btn floating-search-btn" id="navbar-search-btn" aria-label="Search" style="position: static; margin-left: 10px;">
+            <ion-icon name="search-outline"></ion-icon>
+            <span>Ctrl K</span>
+          </button>
+        </li>
       </ul>
       <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -104,9 +110,9 @@
           </section>
         </div>
 
-        <!-- What I'm Working On -->
+        <!-- Experience -->
         <section class="working-on-section">
-          <h3 class="section-heading">What I'm Working On</h3>
+          <h3 class="section-heading">Experience</h3>
           <div class="working-cards-grid">
             
             <!-- AiGeeks Card -->
@@ -114,12 +120,13 @@
               <div class="work-card-default">
                 <div class="work-card-header">
                   <img src="./assets/images/aigeeks.png" alt="AiGeeks Logo">
+                  <div class="work-card-body">
+                    <h4>AiGeeks</h4>
+                    <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                    <p class="work-card-role">Software Engineer Intern</p>
+                  </div>
                 </div>
-                <div class="work-card-body">
-                  <h4>AiGeeks</h4>
-                  <div class="status-badge working"><span class="status-dot"></span> Working</div>
-                  <p class="work-card-role">Software Engineer Intern</p>
-                </div>
+                <span class="work-card-date">May 2026 — Present</span>
               </div>
               <div class="work-card-expanded">
                 <p class="work-description">Building production-grade OSINT platform focused on entity intelligence and cross-source aggregation.</p>
@@ -134,12 +141,13 @@
               <div class="work-card-default">
                 <div class="work-card-header">
                   <img src="./assets/images/flyrank-ai.png" alt="FlyRank Logo">
+                  <div class="work-card-body">
+                    <h4>FlyRank</h4>
+                    <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                    <p class="work-card-role">Backend AI Engineering Fellow</p>
+                  </div>
                 </div>
-                <div class="work-card-body">
-                  <h4>FlyRank</h4>
-                  <div class="status-badge working"><span class="status-dot"></span> Working</div>
-                  <p class="work-card-role">Backend AI Engineering Fellow</p>
-                </div>
+                <span class="work-card-date">Jul 2026 — Present</span>
               </div>
               <div class="work-card-expanded">
                 <p class="work-description">Developing RAG, tool-calling, and agent-based workflows with evaluation pipelines.</p>
@@ -154,14 +162,15 @@
               <div class="work-card-default">
                 <div class="work-card-header">
                   <img src="./assets/images/kulturehire.jpeg" alt="KultureHire Logo">
+                  <div class="work-card-body">
+                    <h4>Data Analytics</h4>
+                    <p class="work-card-role">KultureHire & Analytics</p>
+                  </div>
                 </div>
-                <div class="work-card-body">
-                  <h4>Data Analytics</h4>
-                  <p class="work-card-role">KultureHire & Analytics</p>
-                </div>
+                <span class="work-card-date">Mar 2025 — Jun 2025</span>
               </div>
               <div class="work-card-expanded">
-                <p class="work-description">Analyzed large-scale HR datasets, uncovering trends and building dashboards for insights.</p>
+                <p class="work-description">Building dashboards, performing analytics, and managing data projects.</p>
               </div>
             </div>
 
@@ -170,14 +179,15 @@
               <div class="work-card-default">
                 <div class="work-card-header">
                   <img src="./assets/images/hacktoberfest.jpeg" alt="Open Source Logo">
+                  <div class="work-card-body">
+                    <h4>Open Source</h4>
+                    <p class="work-card-role">Contributions & Hackathons</p>
+                  </div>
                 </div>
-                <div class="work-card-body">
-                  <h4>Open Source</h4>
-                  <p class="work-card-role">Contributions & Hackathons</p>
-                </div>
+                <span class="work-card-date">2023 — Present</span>
               </div>
               <div class="work-card-expanded">
-                <p class="work-description">Meta PyTorch Hackathon finalist. Contributed to Open Food Facts, Layer5, CNCF.</p>
+                <p class="work-description">Merged PRs, generated OSS impact, and engaged with developer communities.</p>
               </div>
             </div>
 
@@ -193,118 +203,138 @@
         </header>
 
         <section class="timeline">
-          <div class="timeline-title-wrapper">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
             <h3 class="h3">Experience</h3>
           </div>
 
           <ol class="timeline-list">
-            <!-- AiGeeks -->
-            <li class="timeline-item" data-accordion>
-              <div class="timeline-header">
-                <div class="timeline-header-left">
+
+            <!-- Software Engineer Intern — AiGeeks -->
+            <li class="timeline-item">
+              <div class="timeline-header-flex">
+                <h4 class="h4 timeline-item-title">
                   <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="timeline-logo">
-                  <div>
-                    <h4 class="h4 timeline-item-title">Software Engineer Intern</h4>
-                    <a href="https://aigeeks.ae" target="_blank" class="timeline-company-link">AiGeeks</a>
-                  </div>
-                </div>
-                <div class="timeline-header-right">
+                  Software Engineer Intern (AI & OSINT Engineering)
+                  <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer" class="timeline-company-link">AiGeeks</a>
                   <span class="status-badge working"><span class="status-dot"></span> Working</span>
-                  <span class="timeline-date">May 2026 — Present</span>
-                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+                </h4>
+                <span class="timeline-date">May 2026 — Present</span>
+              </div>
+
+              <div class="tech-tools">
+                <h5 class="tech-tools-title">Technologies & Tools</h5>
+                <div class="tech-icons-list">
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"></div>
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI"></div>
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"></div>
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"></div>
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"></div>
                 </div>
               </div>
-              <div class="timeline-body">
+
+              <div class="what-ive-done">
+                <h5 class="what-ive-done-title">What I've done</h5>
                 <p class="timeline-text">
-                  • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows, and cross-source data aggregation.<br>
-                  • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL, and Docker.<br>
-                  • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems.
+                  • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows,
+                  and cross-source data aggregation.<br>
+                  • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL,
+                  and Docker.<br>
+                  • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems
+                  for real-world investigations.<br>
+                  • Collaborating on infrastructure, automation, and deployment architecture for high-availability
+                  backend services.
                 </p>
-                <div class="tech-stack">
-                  <span>Python</span><span>FastAPI</span><span>MERN</span><span>PostgreSQL</span><span>Docker</span><span>OSINT</span>
-                </div>
               </div>
             </li>
 
-            <!-- FlyRank AI -->
-            <li class="timeline-item" data-accordion>
-              <div class="timeline-header">
-                <div class="timeline-header-left">
+            <!-- Backend AI Engineering Fellow — FlyRank AI -->
+            <li class="timeline-item">
+              <div class="timeline-header-flex">
+                <h4 class="h4 timeline-item-title">
                   <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="timeline-logo">
-                  <div>
-                    <h4 class="h4 timeline-item-title">Backend AI Engineering Fellow</h4>
-                    <a href="https://www.flyrank.com" target="_blank" class="timeline-company-link">FlyRank AI</a>
-                  </div>
-                </div>
-                <div class="timeline-header-right">
+                  Backend AI Engineering Fellow
+                  <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link">FlyRank AI</a>
                   <span class="status-badge working"><span class="status-dot"></span> Working</span>
-                  <span class="timeline-date">Jul 2026 — Present</span>
-                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+                </h4>
+                <span class="timeline-date">Jul 2026 — Present</span>
+              </div>
+
+              <div class="tech-tools">
+                <h5 class="tech-tools-title">Technologies & Tools</h5>
+                <div class="tech-icons-list">
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"></div>
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI"></div>
+                  <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"></div>
                 </div>
               </div>
-              <div class="timeline-body">
+
+              <div class="what-ive-done">
+                <h5 class="what-ive-done-title">What I've done</h5>
                 <p class="timeline-text">
-                  • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines.<br>
-                  • Designing API contracts, validation layers, and backend workflows for production-oriented AI systems.<br>
-                  • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding and auditability.
+                  • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines
+                  focused on reliability and correctness.<br>
+                  • Designing API contracts, validation layers, and backend workflows for production-oriented
+                  AI systems.<br>
+                  • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding, failure
+                  handling, and auditability.<br>
+                  • Creating evaluation datasets, quality rubrics, and verification processes to assess AI system
+                  performance and limitations.
                 </p>
-                <div class="tech-stack">
-                  <span>RAG</span><span>LLMs</span><span>Evaluation</span><span>Structured Outputs</span><span>Agent Workflows</span>
-                </div>
               </div>
             </li>
 
-            <!-- KultureHire -->
-            <li class="timeline-item" data-accordion>
-              <div class="timeline-header">
-                <div class="timeline-header-left">
+            <!-- Data Analyst — KultureHire -->
+            <li class="timeline-item">
+              <div class="timeline-header-flex">
+                <h4 class="h4 timeline-item-title">
                   <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="timeline-logo">
-                  <div>
-                    <h4 class="h4 timeline-item-title">Data Analyst</h4>
-                    <a href="https://kulturehire.com" target="_blank" class="timeline-company-link">KultureHire</a>
-                  </div>
-                </div>
-                <div class="timeline-header-right">
-                  <span class="timeline-date">Mar 2025 — Jun 2025</span>
-                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
-                </div>
+                  Data Analyst
+                  <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link">KultureHire</a>
+                </h4>
+                <span class="timeline-date">March 2025 — June 2025</span>
               </div>
-              <div class="timeline-body">
+
+              <div class="what-ive-done">
+                <h5 class="what-ive-done-title">What I've done</h5>
                 <p class="timeline-text">
-                  • Analyzed large-scale HR and recruitment datasets to uncover trends related to hiring and retention.<br>
-                  • Built structured analyses and dashboards to translate raw data into actionable insights.<br>
-                  • Supported data-driven decision-making by identifying patterns.
+                  • Analyzed large-scale HR and recruitment datasets to uncover trends related to hiring, retention, and
+                  candidate performance.<br>
+                  • Built structured analyses and dashboards to translate raw data into actionable insights for
+                  stakeholders.<br>
+                  • Supported data-driven decision-making by identifying patterns and presenting findings in a clear,
+                  business-oriented manner.
                 </p>
               </div>
             </li>
+
           </ol>
         </section>
 
+        <!-- EDUCATION -->
         <section class="timeline">
-          <div class="timeline-title-wrapper">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
             <h3 class="h3">Education</h3>
           </div>
+
           <ol class="timeline-list">
-            <li class="timeline-item" data-accordion>
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/mdu.png" alt="MDU" class="timeline-logo">
-                  <div>
-                    <h4 class="h4 timeline-item-title">B.Tech, CS Engineering (Data Science)</h4>
-                    <a href="https://mdu.ac.in/" target="_blank" class="timeline-company-link">Maharshi Dayanand University</a>
-                  </div>
-                </div>
-                <div class="timeline-header-right">
-                  <span class="timeline-date">2023 — 2027</span>
-                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
-                </div>
+            <li class="timeline-item">
+              <div class="timeline-header-flex">
+                <h4 class="h4 timeline-item-title">
+                  <img src="./assets/images/mdu.png" alt="BTech Comp Sci (DS)" class="timeline-logo">
+                  B.Tech, Computer Science Engineering (Data Science)
+                  <a href="https://mdu.ac.in/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">Maharshi Dayanand University</a>
+                </h4>
+                <span class="timeline-date">2023 — 2027</span>
               </div>
-              <div class="timeline-body">
-                <p class="timeline-text">
-                  • Undergraduate coursework focused on computer science fundamentals, data structures, algorithms.<br>
-                  • Developing a strong foundation in machine learning, data analysis, and applied artificial intelligence.
-                </p>
-              </div>
+
+              <p class="timeline-text">
+                • Undergraduate coursework focused on computer science fundamentals, data structures, algorithms, and
+                software engineering.<br>
+                • Developing a strong foundation in machine learning, data analysis, and applied artificial intelligence
+                through academic and practical work.
+              </p>
             </li>
           </ol>
         </section>
