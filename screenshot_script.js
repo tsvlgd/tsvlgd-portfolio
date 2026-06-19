@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 
-const url = 'http://localhost:8080/';
+const url = 'http://localhost:8081/';
 const outputDir = '/home/mehfooj/Desktop/Desktop/tsvlgd-portfolio/design-audit/after/';
 
 const viewports = [
