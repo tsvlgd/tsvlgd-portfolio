@@ -122,3 +122,32 @@ function animateBorder() {
 }
 
 animateBorder();
+
+/* ---------- THEME TOGGLE ---------- */
+const themeBtn = document.getElementById("theme-toggle-btn");
+const currentTheme = localStorage.getItem("theme") || "dark";
+
+if (currentTheme === "light") {
+  document.body.setAttribute("data-theme", "light");
+}
+
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const isLight = document.body.getAttribute("data-theme") === "light";
+    if (isLight) {
+      document.body.removeAttribute("data-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  });
+}
+
+/* ---------- AVATAR FLIP ---------- */
+const avatarBox = document.getElementById("avatar-flip-box");
+if (avatarBox) {
+  avatarBox.addEventListener("click", () => {
+    avatarBox.classList.toggle("flipped");
+  });
+}

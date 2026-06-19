@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -25,8 +25,15 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-        <figure class="avatar-box neon-glow">
-          <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam" width="80" style="border-radius:10%;">
+        <figure class="avatar-box neon-glow" id="avatar-flip-box">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam" width="80" style="border-radius:10%;">
+            </div>
+            <div class="flip-back">
+              <img src="./assets/images/my-avatar.png" alt="Mehfooj Avatar" width="80" style="border-radius:10%;">
+            </div>
+          </div>
         </figure>
 
         <div class="info-content"
@@ -69,6 +76,12 @@
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
           <li class="navbar-item separator"></li>
           <li class="navbar-item">
+            <button class="navbar-theme-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+              <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+              <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+            </button>
+          </li>
+          <li class="navbar-item">
             <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search">
               <ion-icon name="search-outline"></ion-icon>
               <span>Ctrl K</span>
@@ -80,21 +93,15 @@
       <!-- ABOUT -->
       <article class="about active" data-page="about">
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">About Me</h2>
         </header>
 
-        <section class="about-text">
-          <p>
-            I'm an <em>engineer, builder, and learner.</em>
-            Working across <code>{AI, LLMs, RL, backend}</code>. I work on AI applications,
-            intelligence platforms, and production-grade APIs — <em>learning by doing.</em>
-          </p>
-          <p>
-            Currently pursuing a <strong>B.Tech in Computer Science</strong>, I contribute to
-            <strong>open source</strong> and work on real-world systems spanning
-            <code>RAG pipelines</code>, <code>evaluation frameworks</code>,
-            data aggregation, and backend infrastructure.
-          </p>
+        <section class="about-text hero-text">
+          <p class="hero-identity">engineer, builder, learner.</p>
+          <div class="hero-supporting">
+            <p>building ai applications, intelligence platforms, and backend systems.</p>
+            <p>learning by doing, shipping by building.</p>
+          </div>
         </section>
 
         <section class="service">
@@ -264,9 +271,12 @@
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
-                Maharshi Dayanand University
-                <span style="float:right;font-weight:normal;">B.Tech Computer Science</span>
+                <img src="./assets/images/mdu.png" alt="BTech Comp Sci (DS)" class="timeline-logo">
+                B.Tech, Computer Science Engineering (Data Science)
               </h4>
+              <a href="https://mdu.ac.in/" target="_blank" rel="noopener noreferrer"
+                class="timeline-company-link">Maharshi Dayanand University
+              </a>
               <span>2023 — 2027</span>
 
               <p class="timeline-text">

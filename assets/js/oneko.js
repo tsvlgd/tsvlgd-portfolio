@@ -60,7 +60,7 @@
     nekoEl.style.backgroundImage = `url('./assets/images/oneko.gif')`;
     
     // Add neon glow filter
-    nekoEl.style.filter = "drop-shadow(0 0 4px rgba(255, 219, 112, 0.4))";
+    nekoEl.style.filter = "drop-shadow(0 0 4px var(--orange-yellow-crayola))";
     
     document.body.appendChild(nekoEl);
 
