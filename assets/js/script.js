@@ -191,3 +191,34 @@ if (mobileNavToggle && mobileDrawer) {
     });
   });
 }
+
+/* ---------- Quote Rotation ---------- */
+const quotes = [
+  { text: '"If the pain doesn\'t kill me, it will only make me stronger."', author: '— Sung Jin-Woo, Solo Leveling' },
+  { text: '"Discipline is choosing what you want most over what you want now."', author: '— Abraham Lincoln' },
+  { text: '"First deserve, then desire."', author: '— Unknown' },
+  { text: '"Action cures fear."', author: '— David Schwartz' }
+];
+
+const quoteText = document.getElementById('quote-text');
+const quoteAuthor = document.getElementById('quote-author');
+
+if (quoteText && quoteAuthor) {
+  let currentQuoteIndex = 0;
+  setInterval(() => {
+    // Fade out
+    quoteText.style.opacity = '0';
+    quoteAuthor.style.opacity = '0';
+    
+    setTimeout(() => {
+      // Update text
+      currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+      quoteText.innerText = quotes[currentQuoteIndex].text;
+      quoteAuthor.innerText = quotes[currentQuoteIndex].author;
+      
+      // Fade in
+      quoteText.style.opacity = '1';
+      quoteAuthor.style.opacity = '1';
+    }, 400); // Wait for transition
+  }, 6000); // Rotate every 6 seconds
+}

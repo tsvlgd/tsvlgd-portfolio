@@ -588,6 +588,56 @@ img {
   color: var(--text-muted);
 }
 
+/* Quote Section */
+.quote-section {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.quote-card {
+  position: relative;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 40px 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quote-icon-bg {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 120px;
+  color: var(--text-muted);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.quote-text {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  z-index: 1;
+  transition: opacity var(--transition-smooth);
+}
+
+.quote-author {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  align-self: flex-end;
+  z-index: 1;
+  transition: opacity var(--transition-smooth);
+}
+
 /*-----------------------------------*\
   #RESUME PAGE
 \*-----------------------------------*/
