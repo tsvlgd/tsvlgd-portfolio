@@ -12,7 +12,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -23,52 +25,33 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-        <figure class="avatar-box">
+        <figure class="avatar-box neon-glow">
           <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam" width="80" style="border-radius:10%;">
         </figure>
 
-        <div class="info-content">
-          <h1 class="name">Mehfooj Alam</h1>
-          <p class="title">Software Developer</p>
+        <div class="info-content"
+          style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <h1 class="name" style="margin-bottom: 10px;">Mehfooj Alam</h1>
+
+          <div class="title-wrapper"
+            style="display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 15px; font-size: 14px; color: var(--light-gray);">
+            <span>Engineer &middot; Builder &middot;</span>
+            <button class="copy-email-btn"
+              onclick="navigator.clipboard.writeText('ml.mehfooj@gmail.com'); const icon = this.querySelector('ion-icon'); icon.name='checkmark-outline'; setTimeout(() => icon.name='copy-outline', 2000);"
+              style="display: flex; align-items: center; gap: 4px; color: var(--light-gray); transition: color 0.3s; cursor: pointer;">
+              ml.mehfooj@gmail.com <ion-icon name="copy-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="social-list" style="justify-content: center; padding-bottom: 0;">
+            <li class="social-item"><a href="https://github.com/tsvlgd" class="social-link"><ion-icon
+                  name="logo-github"></ion-icon></a></li>
+            <li class="social-item"><a href="https://twitter.com/Mehfooj194108" class="social-link"><ion-icon
+                  name="logo-twitter"></ion-icon></a></li>
+            <li class="social-item"><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"
+                class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          </ul>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
-
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:ml.mehfooj@gmail.com" class="contact-link">ml.mehfooj@gmail.com</a>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Gurugram, Haryana</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item"><a href="https://github.com/tsvlgd" class="social-link"><ion-icon
-                name="logo-github"></ion-icon></a></li>
-          <li class="social-item"><a href="https://twitter.com/Mehfooj194108" class="social-link"><ion-icon
-                name="logo-twitter"></ion-icon></a></li>
-          <li class="social-item"><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"
-              class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        </ul>
       </div>
 
     </aside>
@@ -84,6 +67,13 @@
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Media</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+          <li class="navbar-item separator"></li>
+          <li class="navbar-item">
+            <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search">
+              <ion-icon name="search-outline"></ion-icon>
+              <span>Ctrl K</span>
+            </button>
+          </li>
         </ul>
       </nav>
 
@@ -95,13 +85,15 @@
 
         <section class="about-text">
           <p>
-            I am a passionate software developer with a strong interest in machine learning and artificial intelligence.
-            With hands-on experience in applied ML, GenAI, RAG, and MLOps, I focus on building production-grade AI
-            systems.
+            I'm an <em>engineer, builder, and learner.</em>
+            Working across <code>{AI, LLMs, RL, backend}</code>. I work on AI applications,
+            intelligence platforms, and production-grade APIs — <em>learning by doing.</em>
           </p>
           <p>
-            Currently pursuing a Bachelor of Technology in Computer Science, I actively contribute to open source
-            and work on real-world AI problems spanning analytics, automation, and intelligent agents.
+            Currently pursuing a <strong>B.Tech in Computer Science</strong>, I contribute to
+            <strong>open source</strong> and work on real-world systems spanning
+            <code>RAG pipelines</code>, <code>evaluation frameworks</code>,
+            data aggregation, and backend infrastructure.
           </p>
         </section>
 
@@ -110,37 +102,68 @@
 
           <ul class="service-list">
             <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/schoolai.jpeg" width="100"></div>
+              <div class="service-icon-box">
+                <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="company-logo" width="60">
+                </a>
+              </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI Intern</h4>
-                <p class="service-item-text">Building GenAI, RAG, MLOps and agent systems.</p>
+                <h4 class="h4 service-item-title">Backend & AI Engineering</h4>
+                <p class="service-item-text">RAG pipelines, evaluation workflows, and
+                  retrieval-backed AI applications.</p>
               </div>
             </li>
 
             <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/off.jpeg" width="100"></div>
+              <div class="service-icon-box">
+                <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="company-logo" width="60">
+                </a>
+              </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Open Source Contributor</h4>
-                <p class="service-item-text">Contributor to Open Food Facts (Robotoff).</p>
+                <h4 class="h4 service-item-title">osint & CyberSecurity</h4>
+                <p class="service-item-text">Intelligence platform & CyberSecurity,
+                  cross-source data aggregation,
+                  and investigation workflows backend engineering.</p>
               </div>
             </li>
 
             <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/kulturehire.jpeg" width="100"></div>
+              <div class="service-icon-box">
+                <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="company-logo" width="60">
+                </a>
+              </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analyst</h4>
-                <p class="service-item-text">Analyzed 10k+ data points and built dashboards.</p>
+                <h4 class="h4 service-item-title">Data Analytics</h4>
+                <p class="service-item-text">Large-scale data analysis, dashboards, and data-driven insights for HR and
+                  recruitment.</p>
               </div>
             </li>
 
             <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/hacktoberfest.jpeg" width="100"></div>
+              <div class="service-icon-box"><img src="./assets/images/hacktoberfest.jpeg" class="company-logo"
+                  width="60"></div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Hacktoberfest Super Contributor</h4>
-                <p class="service-item-text">Delivered impactful fixes across OSS projects.</p>
+                <h4 class="h4 service-item-title">Open Source & Hackathons</h4>
+                <p class="service-item-text">OSS contributions, Meta PyTorch OpenEnv Hackathon finalist, backend
+                  patches, and infra automation.</p>
               </div>
             </li>
           </ul>
+        </section>
+
+        <!-- OPEN SOURCE CONTRIBUTIONS & HACKATHONS -->
+        <section class="service">
+          <h3 class="h3 service-title">Open Source Contributions & Hackathons</h3>
+          <div class="about-text">
+            <p>
+              contributed to Open Food Facts, Layer5, Cncf, and Recode Hive.
+              Focused on giving patches, SDK, Docker, CI/CD.
+
+              Meta PyTorch OpenEnv Hackathon x Scaler solo entry cleared Phase 2 deep validation.
+            </p>
+          </div>
         </section>
       </article>
 
@@ -158,47 +181,63 @@
 
           <ol class="timeline-list">
 
-            <!-- AI Intern -->
+            <!-- Software Engineer Intern — AiGeeks -->
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
-                AI Intern
-                <span style="float:right;font-weight:normal;">School of AI</span>
+                <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="timeline-logo">
+                Software Engineer Intern (AI & OSINT Engineering)
+                <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer"
+                  class="timeline-company-link">AiGeeks</a>
               </h4>
-              <span>Jan 2026 — Present</span>
+              <span>May 2026 — Present</span>
 
               <p class="timeline-text">
-                • Designing and implementing production-grade Generative AI solutions, including agent-based workflows
-                and retrieval-augmented generation (RAG) systems.<br>
-                • Developing end-to-end AI pipelines with a focus on reliability, scalability, and real-world
-                applicability.<br>
-                • Working with modern ML tooling and MLOps practices to deploy, monitor, and iterate on AI systems in
-                production environments.
+                • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows,
+                and cross-source data aggregation.<br>
+                • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL,
+                and Docker.<br>
+                • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems
+                for real-world investigations.<br>
+                • Collaborating on infrastructure, automation, and deployment architecture for high-availability
+                backend services.
+              </p>
+              <p class="timeline-text" style="margin-top:5px;color:var(--vegas-gold);font-size:12px;">
+                Python · FastAPI · MERN · PostgreSQL · Docker · OSINT
               </p>
             </li>
 
-            <!-- Open Source Contributor -->
+            <!-- Backend AI Engineering Fellow — FlyRank AI -->
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
-                Open Source Contributor
-                <span style="float:right;font-weight:normal;">Open Food Facts</span>
+                <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="timeline-logo">
+                Backend AI Engineering Fellow
+                <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer"
+                  class="timeline-company-link">FlyRank AI</a>
               </h4>
-              <span>July 2025 — Oct 2025</span>
+              <span>Jul 2026 — Present</span>
 
               <p class="timeline-text">
-                • Contributed to the Open Food Facts ecosystem, with a focus on improving developer-facing SDKs and
-                internal tooling.<br>
-                • Enhanced code quality, maintainability, and usability by addressing bugs, refining APIs, and improving
-                documentation.<br>
-                • Collaborated with a distributed open-source community, participating in discussions, reviews, and
-                iterative improvements.
+                • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines
+                focused on reliability and correctness.<br>
+                • Designing API contracts, validation layers, and backend workflows for production-oriented
+                AI systems.<br>
+                • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding, failure
+                handling, and auditability.<br>
+                • Creating evaluation datasets, quality rubrics, and verification processes to assess AI system
+                performance and limitations.
+              </p>
+              <p class="timeline-text" style="margin-top:5px;color:var(--vegas-gold);font-size:12px;">
+                RAG · LLMs · Evaluation Frameworks · Structured Outputs · Agent Workflows · APIs
               </p>
             </li>
 
-            <!-- Data Analyst -->
+            <!-- Data Analyst — KultureHire -->
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">
+                <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="timeline-logo">
                 Data Analyst
-                <span style="float:right;font-weight:normal;">KultureHire</span>
+                <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer"
+                  class="timeline-company-link">KultureHire</a>
               </h4>
               <span>March 2025 — June 2025</span>
 
@@ -248,122 +287,122 @@
         </header>
 
         <section class="projects">
-      <ul class="project-list">
+          <ul class="project-list">
 
-  <!-- LogIQ -->
-  <li class="project-item active" data-filter-item data-category="machine learning">
-    <a href="https://github.com/tsvlgd/LogIQ" target="_blank">
+            <!-- LogIQ -->
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/tsvlgd/LogIQ" target="_blank">
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-        <img src="./assets/images/logiq.png" alt="LogIQ" loading="lazy">
-      </figure>
+                  <img src="./assets/images/logiq.png" alt="LogIQ" loading="lazy">
+                </figure>
 
-      <h3 class="project-title">LogIQ – Hybrid Log Classification</h3>
-      <p class="project-category">NLP / LLM Systems</p>
+                <h3 class="project-title">LogIQ – Hybrid Log Classification</h3>
+                <p class="project-category">NLP / LLM Systems</p>
 
-    </a>
-  </li>
-
-
-  <!-- Full Stack ML -->
-  <li class="project-item active" data-filter-item data-category="machine learning">
-    <a href="https://github.com/tsvlgd/Telco-Customer-Churn-ML" target="_blank">
-
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-
-        <img src="./assets/images/full-stack_ml.webp" alt="Full Stack ML" loading="lazy">
-      </figure>
-
-      <h3 class="project-title">Full Stack ML – Customer Churn</h3>
-      <p class="project-category">MLOps / Production ML</p>
-
-    </a>
-  </li>
+              </a>
+            </li>
 
 
-  <!-- GPT -->
-  <li class="project-item active" data-filter-item data-category="machine learning">
-    <a href="https://github.com/tsvlgd/gpt-from-scratch" target="_blank">
+            <!-- Full Stack ML -->
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/tsvlgd/Telco-Customer-Churn-ML" target="_blank">
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-        <img src="./assets/images/gpt.webp" alt="GPT Transformer" loading="lazy">
-      </figure>
+                  <img src="./assets/images/full-stack_ml.webp" alt="Full Stack ML" loading="lazy">
+                </figure>
 
-      <h3 class="project-title">GPT From Scratch</h3>
-      <p class="project-category">Deep Learning / Transformers</p>
+                <h3 class="project-title">Full Stack ML – Customer Churn</h3>
+                <p class="project-category">MLOps / Production ML</p>
 
-    </a>
-  </li>
-
-
-  <!-- CNN -->
-  <li class="project-item active" data-filter-item data-category="machine learning">
-    <a href="https://github.com/tsvlgd/MLE" target="_blank">
-
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-
-        <img src="./assets/images/star-history-2026129.png" alt="CNN Image Classification" loading="lazy">
-      </figure>
-
-      <h3 class="project-title">CNN Image Classification</h3>
-      <p class="project-category">Deep Learning</p>
-
-    </a>
-  </li>
+              </a>
+            </li>
 
 
-  <!-- Customer Segmentation -->
-  <li class="project-item active" data-filter-item data-category="data science">
-    <a href="https://github.com/tsvlgd/unsupervised-customer-segmentation" target="_blank">
+            <!-- GPT -->
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/tsvlgd/gpt-from-scratch" target="_blank">
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-        <img src="./assets/images/unsupervised.png" alt="Customer Segmentation" loading="lazy">
-      </figure>
+                  <img src="./assets/images/gpt.webp" alt="GPT Transformer" loading="lazy">
+                </figure>
 
-      <h3 class="project-title">Customer Segmentation</h3>
-      <p class="project-category">Data Science</p>
+                <h3 class="project-title">GPT From Scratch</h3>
+                <p class="project-category">Deep Learning / Transformers</p>
 
-    </a>
-  </li>
+              </a>
+            </li>
 
 
-  <!-- KultureHire -->
-  <li class="project-item active" data-filter-item data-category="data science">
-    <a href="https://kulturehire.com/portfolio/mehfooj-alam" target="_blank">
+            <!-- CNN -->
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/tsvlgd/MLE" target="_blank">
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-        <img src="./assets/images/kulturehireportfolio.png" alt="KultureHire Portfolio" loading="lazy">
-      </figure>
+                  <img src="./assets/images/star-history-2026129.png" alt="CNN Image Classification" loading="lazy">
+                </figure>
 
-      <h3 class="project-title">KultureHire Analytics</h3>
-      <p class="project-category">Data Analytics</p>
+                <h3 class="project-title">CNN Image Classification</h3>
+                <p class="project-category">Deep Learning</p>
 
-    </a>
-  </li>
+              </a>
+            </li>
 
-</ul>
+
+            <!-- Customer Segmentation -->
+            <li class="project-item active" data-filter-item data-category="data science">
+              <a href="https://github.com/tsvlgd/unsupervised-customer-segmentation" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/unsupervised.png" alt="Customer Segmentation" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Customer Segmentation</h3>
+                <p class="project-category">Data Science</p>
+
+              </a>
+            </li>
+
+
+            <!-- KultureHire -->
+            <li class="project-item active" data-filter-item data-category="data science">
+              <a href="https://kulturehire.com/portfolio/mehfooj-alam" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/kulturehireportfolio.png" alt="KultureHire Portfolio" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">KultureHire Analytics</h3>
+                <p class="project-category">Data Analytics</p>
+
+              </a>
+            </li>
+
+          </ul>
         </section>
       </article>
 
@@ -461,7 +500,55 @@
     </div>
   </main>
 
+  <!-- COMMAND PALETTE -->
+  <div id="cmd-palette-overlay" class="cmd-overlay">
+    <div class="cmd-modal">
+      <div class="cmd-input-wrapper">
+        <ion-icon name="search-outline" class="cmd-search-icon"></ion-icon>
+        <input type="text" id="cmd-input" class="cmd-input" placeholder="Type a command or search..."
+          autocomplete="off">
+        <kbd class="cmd-kbd">ESC</kbd>
+      </div>
+      <div class="cmd-separator"></div>
+      <div class="cmd-group-label">Navigation</div>
+      <ul id="cmd-list" class="cmd-list">
+        <li class="cmd-item" data-nav="about"><ion-icon name="person-outline"></ion-icon>
+          <div><span class="cmd-item-title">About</span><span class="cmd-item-desc">Learn more about me</span></div>
+          <kbd>A</kbd>
+        </li>
+        <li class="cmd-item" data-nav="resume"><ion-icon name="briefcase-outline"></ion-icon>
+          <div><span class="cmd-item-title">Resume</span><span class="cmd-item-desc">View work experience</span></div>
+          <kbd>R</kbd>
+        </li>
+        <li class="cmd-item" data-nav="portfolio"><ion-icon name="code-slash-outline"></ion-icon>
+          <div><span class="cmd-item-title">Portfolio</span><span class="cmd-item-desc">Browse projects</span></div>
+          <kbd>P</kbd>
+        </li>
+        <li class="cmd-item" data-nav="media"><ion-icon name="videocam-outline"></ion-icon>
+          <div><span class="cmd-item-title">Media</span><span class="cmd-item-desc">LinkedIn posts & media</span></div>
+          <kbd>M</kbd>
+        </li>
+        <li class="cmd-item" data-nav="contact"><ion-icon name="mail-outline"></ion-icon>
+          <div><span class="cmd-item-title">Contact</span><span class="cmd-item-desc">Get in touch</span></div>
+          <kbd>C</kbd>
+        </li>
+      </ul>
+      <div class="cmd-group-label">Links</div>
+      <ul id="cmd-links" class="cmd-list">
+        <li class="cmd-item" data-url="https://github.com/tsvlgd"><ion-icon name="logo-github"></ion-icon>
+          <div><span class="cmd-item-title">GitHub</span><span class="cmd-item-desc">View repositories</span></div>
+        </li>
+        <li class="cmd-item" data-url="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"><ion-icon
+            name="logo-linkedin"></ion-icon>
+          <div><span class="cmd-item-title">LinkedIn</span><span class="cmd-item-desc">Professional profile</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/oneko.js"></script>
+  <script src="./assets/js/cmd-palette.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

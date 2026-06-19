@@ -108,3 +108,17 @@ navLinks.forEach(link => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+/* ---------- PORTFOLIO BORDER ANIMATION ---------- */
+const projectItems = document.querySelectorAll('.project-item > a');
+let borderAngle = 0;
+
+function animateBorder() {
+  borderAngle = (borderAngle + 2) % 360;
+  projectItems.forEach(item => {
+    item.style.setProperty('--angle', `${borderAngle}deg`);
+  });
+  requestAnimationFrame(animateBorder);
+}
+
+animateBorder();
