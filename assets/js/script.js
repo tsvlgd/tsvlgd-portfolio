@@ -151,3 +151,43 @@ if (avatarBox) {
     avatarBox.classList.toggle("flipped");
   });
 }
+
+/* ---------- ACCORDION ---------- */
+const accordionItems = document.querySelectorAll("[data-accordion]");
+accordionItems.forEach(item => {
+  const header = item.querySelector('.timeline-header');
+  if (header) {
+    header.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  }
+});
+
+/* ---------- MOBILE DRAWER ---------- */
+const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+const mobileDrawer = document.getElementById('mobile-drawer');
+const mobileDrawerLinks = document.querySelectorAll('.mobile-drawer-link');
+
+if (mobileNavToggle && mobileDrawer) {
+  const toggleDrawer = () => {
+    mobileNavToggle.classList.toggle('active');
+    mobileDrawer.classList.toggle('active');
+  };
+
+  mobileNavToggle.addEventListener('click', toggleDrawer);
+
+  mobileDrawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Keep syncing with main logic
+      const targetPage = link.innerText.toLowerCase();
+      pages.forEach(page => {
+        page.classList.toggle("active", page.dataset.page === targetPage);
+      });
+      navLinks.forEach(l => l.classList.toggle("active", l.innerText.toLowerCase() === targetPage));
+      mobileDrawerLinks.forEach(l => l.classList.toggle("active", l === link));
+      
+      toggleDrawer();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+}

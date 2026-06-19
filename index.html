@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -25,40 +25,44 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-        <figure class="avatar-box neon-glow" id="avatar-flip-box">
+        <figure class="avatar-box" id="avatar-flip-box">
           <div class="flip-inner">
             <div class="flip-front">
-              <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam" width="80" style="border-radius:10%;">
+              <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam">
             </div>
             <div class="flip-back">
-              <img src="./assets/images/my-avatar.png" alt="Mehfooj Avatar" width="80" style="border-radius:10%;">
+              <img src="./assets/images/my-avatar.png" alt="Mehfooj Avatar">
             </div>
           </div>
         </figure>
 
-        <div class="info-content"
-          style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <h1 class="name" style="margin-bottom: 10px;">Mehfooj Alam</h1>
-
-          <div class="title-wrapper"
-            style="display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 15px; font-size: 14px; color: var(--light-gray);">
-            <span>Engineer &middot; Builder &middot;</span>
-            <button class="copy-email-btn"
-              onclick="navigator.clipboard.writeText('ml.mehfooj@gmail.com'); const icon = this.querySelector('ion-icon'); icon.name='checkmark-outline'; setTimeout(() => icon.name='copy-outline', 2000);"
-              style="display: flex; align-items: center; gap: 4px; color: var(--light-gray); transition: color 0.3s; cursor: pointer;">
-              ml.mehfooj@gmail.com <ion-icon name="copy-outline"></ion-icon>
-            </button>
-          </div>
-
-          <ul class="social-list" style="justify-content: center; padding-bottom: 0;">
-            <li class="social-item"><a href="https://github.com/tsvlgd" class="social-link"><ion-icon
-                  name="logo-github"></ion-icon></a></li>
-            <li class="social-item"><a href="https://twitter.com/Mehfooj194108" class="social-link"><ion-icon
-                  name="logo-twitter"></ion-icon></a></li>
-            <li class="social-item"><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"
-                class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          </ul>
+        <div class="info-content">
+          <h1 class="name">Mehfooj Alam</h1>
+          <p class="title">AI Engineer</p>
+          <p class="location"><ion-icon name="location-outline"></ion-icon> Gurgaon, India</p>
         </div>
+
+        <div class="sidebar-separator"></div>
+
+        <div class="sidebar-email">
+          <button class="copy-email-btn"
+            onclick="navigator.clipboard.writeText('ml.mehfooj@gmail.com'); const icon = this.querySelector('.email-copy-icon'); icon.name='checkmark-outline'; setTimeout(() => icon.name='copy-outline', 2000);">
+            <ion-icon name="mail-outline" class="email-icon"></ion-icon>
+            <span>ml.mehfooj@gmail.com</span>
+            <ion-icon name="copy-outline" class="email-copy-icon"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item"><a href="https://github.com/tsvlgd" class="social-link" target="_blank"><ion-icon
+                name="logo-github"></ion-icon></a></li>
+          <li class="social-item"><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" class="social-link"
+              target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li class="social-item"><a href="https://twitter.com/Mehfooj194108" class="social-link"
+              target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        </ul>
       </div>
 
     </aside>
@@ -66,7 +70,7 @@
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      <!-- NAVBAR (Blog + Publications removed) -->
+      <!-- NAVBAR -->
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
@@ -74,21 +78,33 @@
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Media</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-          <li class="navbar-item separator"></li>
-          <li class="navbar-item">
-            <button class="navbar-theme-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
-              <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
-              <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
-            </button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search">
-              <ion-icon name="search-outline"></ion-icon>
-              <span>Ctrl K</span>
-            </button>
-          </li>
         </ul>
+        <div class="navbar-actions">
+          <button class="navbar-theme-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+            <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+          </button>
+          <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search">
+            <ion-icon name="search-outline"></ion-icon>
+            <span>Ctrl K</span>
+          </button>
+        </div>
+        <!-- Mobile hamburger -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer">
+        <ul class="mobile-drawer-list">
+          <li><button class="mobile-drawer-link active" data-nav-link>About</button></li>
+          <li><button class="mobile-drawer-link" data-nav-link>Resume</button></li>
+          <li><button class="mobile-drawer-link" data-nav-link>Portfolio</button></li>
+          <li><button class="mobile-drawer-link" data-nav-link>Media</button></li>
+          <li><button class="mobile-drawer-link" data-nav-link>Contact</button></li>
+        </ul>
+      </div>
 
       <!-- ABOUT -->
       <article class="about active" data-page="about">
@@ -105,13 +121,13 @@
         </section>
 
         <section class="service">
-          <h3 class="h3 service-title">What I'm doing</h3>
+          <h3 class="h3 service-title">What I'm Working On</h3>
 
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
                 <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer">
-                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="company-logo" width="60">
+                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="company-logo" width="48">
                 </a>
               </div>
               <div class="service-content-box">
@@ -124,11 +140,11 @@
             <li class="service-item">
               <div class="service-icon-box">
                 <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer">
-                  <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="company-logo" width="60">
+                  <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="company-logo" width="48">
                 </a>
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">osint & CyberSecurity</h4>
+                <h4 class="h4 service-item-title">OSINT & CyberSecurity</h4>
                 <p class="service-item-text">Intelligence platform & CyberSecurity,
                   cross-source data aggregation,
                   and investigation workflows backend engineering.</p>
@@ -138,7 +154,7 @@
             <li class="service-item">
               <div class="service-icon-box">
                 <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer">
-                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="company-logo" width="60">
+                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="company-logo" width="48">
                 </a>
               </div>
               <div class="service-content-box">
@@ -150,7 +166,7 @@
 
             <li class="service-item">
               <div class="service-icon-box"><img src="./assets/images/hacktoberfest.jpeg" class="company-logo"
-                  width="60"></div>
+                  width="48"></div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Open Source & Hackathons</h4>
                 <p class="service-item-text">OSS contributions, Meta PyTorch OpenEnv Hackathon finalist, backend
@@ -189,73 +205,99 @@
           <ol class="timeline-list">
 
             <!-- Software Engineer Intern — AiGeeks -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="timeline-logo">
-                Software Engineer Intern (AI & OSINT Engineering)
-                <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer"
-                  class="timeline-company-link">AiGeeks</a>
-              </h4>
-              <span>May 2026 — Present</span>
-
-              <p class="timeline-text">
-                • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows,
-                and cross-source data aggregation.<br>
-                • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL,
-                and Docker.<br>
-                • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems
-                for real-world investigations.<br>
-                • Collaborating on infrastructure, automation, and deployment architecture for high-availability
-                backend services.
-              </p>
-              <p class="timeline-text" style="margin-top:5px;color:var(--vegas-gold);font-size:12px;">
-                Python · FastAPI · MERN · PostgreSQL · Docker · OSINT
-              </p>
+            <li class="timeline-item" data-accordion>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="timeline-logo">
+                  <div>
+                    <h4 class="h4 timeline-item-title">Software Engineer Intern</h4>
+                    <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer"
+                      class="timeline-company-link">AiGeeks</a>
+                  </div>
+                </div>
+                <div class="timeline-header-right">
+                  <span class="status-badge working"><span class="status-dot"></span> Working</span>
+                  <span class="timeline-date">May 2026 — Present</span>
+                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p class="timeline-text">
+                  • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows,
+                  and cross-source data aggregation.<br>
+                  • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL,
+                  and Docker.<br>
+                  • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems
+                  for real-world investigations.<br>
+                  • Collaborating on infrastructure, automation, and deployment architecture for high-availability
+                  backend services.
+                </p>
+                <div class="tech-stack">
+                  <span>Python</span><span>FastAPI</span><span>MERN</span><span>PostgreSQL</span><span>Docker</span><span>OSINT</span>
+                </div>
+              </div>
             </li>
 
             <!-- Backend AI Engineering Fellow — FlyRank AI -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="timeline-logo">
-                Backend AI Engineering Fellow
-                <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer"
-                  class="timeline-company-link">FlyRank AI</a>
-              </h4>
-              <span>Jul 2026 — Present</span>
-
-              <p class="timeline-text">
-                • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines
-                focused on reliability and correctness.<br>
-                • Designing API contracts, validation layers, and backend workflows for production-oriented
-                AI systems.<br>
-                • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding, failure
-                handling, and auditability.<br>
-                • Creating evaluation datasets, quality rubrics, and verification processes to assess AI system
-                performance and limitations.
-              </p>
-              <p class="timeline-text" style="margin-top:5px;color:var(--vegas-gold);font-size:12px;">
-                RAG · LLMs · Evaluation Frameworks · Structured Outputs · Agent Workflows · APIs
-              </p>
+            <li class="timeline-item" data-accordion>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="timeline-logo">
+                  <div>
+                    <h4 class="h4 timeline-item-title">Backend AI Engineering Fellow</h4>
+                    <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer"
+                      class="timeline-company-link">FlyRank AI</a>
+                  </div>
+                </div>
+                <div class="timeline-header-right">
+                  <span class="status-badge working"><span class="status-dot"></span> Working</span>
+                  <span class="timeline-date">Jul 2026 — Present</span>
+                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p class="timeline-text">
+                  • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines
+                  focused on reliability and correctness.<br>
+                  • Designing API contracts, validation layers, and backend workflows for production-oriented
+                  AI systems.<br>
+                  • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding, failure
+                  handling, and auditability.<br>
+                  • Creating evaluation datasets, quality rubrics, and verification processes to assess AI system
+                  performance and limitations.
+                </p>
+                <div class="tech-stack">
+                  <span>RAG</span><span>LLMs</span><span>Evaluation</span><span>Structured Outputs</span><span>Agent Workflows</span><span>APIs</span>
+                </div>
+              </div>
             </li>
 
             <!-- Data Analyst — KultureHire -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="timeline-logo">
-                Data Analyst
-                <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer"
-                  class="timeline-company-link">KultureHire</a>
-              </h4>
-              <span>March 2025 — June 2025</span>
-
-              <p class="timeline-text">
-                • Analyzed large-scale HR and recruitment datasets to uncover trends related to hiring, retention, and
-                candidate performance.<br>
-                • Built structured analyses and dashboards to translate raw data into actionable insights for
-                stakeholders.<br>
-                • Supported data-driven decision-making by identifying patterns and presenting findings in a clear,
-                business-oriented manner.
-              </p>
+            <li class="timeline-item" data-accordion>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="timeline-logo">
+                  <div>
+                    <h4 class="h4 timeline-item-title">Data Analyst</h4>
+                    <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer"
+                      class="timeline-company-link">KultureHire</a>
+                  </div>
+                </div>
+                <div class="timeline-header-right">
+                  <span class="timeline-date">Mar 2025 — Jun 2025</span>
+                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p class="timeline-text">
+                  • Analyzed large-scale HR and recruitment datasets to uncover trends related to hiring, retention, and
+                  candidate performance.<br>
+                  • Built structured analyses and dashboards to translate raw data into actionable insights for
+                  stakeholders.<br>
+                  • Supported data-driven decision-making by identifying patterns and presenting findings in a clear,
+                  business-oriented manner.
+                </p>
+              </div>
             </li>
 
           </ol>
@@ -269,22 +311,29 @@
           </div>
 
           <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <img src="./assets/images/mdu.png" alt="BTech Comp Sci (DS)" class="timeline-logo">
-                B.Tech, Computer Science Engineering (Data Science)
-              </h4>
-              <a href="https://mdu.ac.in/" target="_blank" rel="noopener noreferrer"
-                class="timeline-company-link">Maharshi Dayanand University
-              </a>
-              <span>2023 — 2027</span>
-
-              <p class="timeline-text">
-                • Undergraduate coursework focused on computer science fundamentals, data structures, algorithms, and
-                software engineering.<br>
-                • Developing a strong foundation in machine learning, data analysis, and applied artificial intelligence
-                through academic and practical work.
-              </p>
+            <li class="timeline-item" data-accordion>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/mdu.png" alt="MDU" class="timeline-logo">
+                  <div>
+                    <h4 class="h4 timeline-item-title">B.Tech, CS Engineering (Data Science)</h4>
+                    <a href="https://mdu.ac.in/" target="_blank" rel="noopener noreferrer"
+                      class="timeline-company-link">Maharshi Dayanand University</a>
+                  </div>
+                </div>
+                <div class="timeline-header-right">
+                  <span class="timeline-date">2023 — 2027</span>
+                  <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p class="timeline-text">
+                  • Undergraduate coursework focused on computer science fundamentals, data structures, algorithms, and
+                  software engineering.<br>
+                  • Developing a strong foundation in machine learning, data analysis, and applied artificial intelligence
+                  through academic and practical work.
+                </p>
+              </div>
             </li>
           </ol>
         </section>
@@ -302,113 +351,84 @@
             <!-- LogIQ -->
             <li class="project-item active" data-filter-item data-category="machine learning">
               <a href="https://github.com/tsvlgd/LogIQ" target="_blank">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/logiq.png" alt="LogIQ" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">LogIQ – Hybrid Log Classification</h3>
                 <p class="project-category">NLP / LLM Systems</p>
-
               </a>
             </li>
-
 
             <!-- Full Stack ML -->
             <li class="project-item active" data-filter-item data-category="machine learning">
               <a href="https://github.com/tsvlgd/Telco-Customer-Churn-ML" target="_blank">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/full-stack_ml.webp" alt="Full Stack ML" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Full Stack ML – Customer Churn</h3>
                 <p class="project-category">MLOps / Production ML</p>
-
               </a>
             </li>
-
 
             <!-- GPT -->
             <li class="project-item active" data-filter-item data-category="machine learning">
               <a href="https://github.com/tsvlgd/gpt-from-scratch" target="_blank">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/gpt.webp" alt="GPT Transformer" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">GPT From Scratch</h3>
                 <p class="project-category">Deep Learning / Transformers</p>
-
               </a>
             </li>
-
 
             <!-- CNN -->
             <li class="project-item active" data-filter-item data-category="machine learning">
               <a href="https://github.com/tsvlgd/MLE" target="_blank">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/star-history-2026129.png" alt="CNN Image Classification" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">CNN Image Classification</h3>
                 <p class="project-category">Deep Learning</p>
-
               </a>
             </li>
-
 
             <!-- Customer Segmentation -->
             <li class="project-item active" data-filter-item data-category="data science">
               <a href="https://github.com/tsvlgd/unsupervised-customer-segmentation" target="_blank">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/unsupervised.png" alt="Customer Segmentation" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Customer Segmentation</h3>
                 <p class="project-category">Data Science</p>
-
               </a>
             </li>
-
 
             <!-- KultureHire -->
             <li class="project-item active" data-filter-item data-category="data science">
               <a href="https://kulturehire.com/portfolio/mehfooj-alam" target="_blank">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/kulturehireportfolio.png" alt="KultureHire Portfolio" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">KultureHire Analytics</h3>
                 <p class="project-category">Data Analytics</p>
-
               </a>
             </li>
 
@@ -420,54 +440,30 @@
       <article class="media" data-page="media">
         <header>
           <h2 class="h2 article-title">Media</h2>
-          <!--
-  - #MEDIA
--->
-
-          <article class="media" data-page="media">
-
-            <header>
-              <h2 class="h2 article-title">Media</h2>
-            </header>
-
-            <section class="media-posts">
-              <ul class="media-posts-list">
-
-                <!-- LinkedIn Post 1 -->
-                <li class="media-post-item">
-                  <div class="media-content">
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7375788866231984128"
-                      height="814" width="504" frameborder="0" allowfullscreen title="LinkedIn post">
-                    </iframe>
-                  </div>
-                </li>
-
-                <!-- LinkedIn Post 2 -->
-                <li class="media-post-item">
-                  <div class="media-content">
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398467749884227584"
-                      height="898" width="504" frameborder="0" allowfullscreen title="LinkedIn post">
-                    </iframe>
-                  </div>
-                </li>
-
-                <!-- Add more media items as needed -->
-
-              </ul>
-            </section>
-
-          </article>
-
         </header>
+
+        <section class="media-posts">
+          <ul class="media-posts-list">
+            <li class="media-post-item">
+              <div class="media-content">
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7375788866231984128"
+                  height="814" width="504" frameborder="0" allowfullscreen title="LinkedIn post">
+                </iframe>
+              </div>
+            </li>
+            <li class="media-post-item">
+              <div class="media-content">
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398467749884227584"
+                  height="898" width="504" frameborder="0" allowfullscreen title="LinkedIn post">
+                </iframe>
+              </div>
+            </li>
+          </ul>
+        </section>
       </article>
 
-
-      <!--
-        - #CONTACT
-      -->
-
+      <!-- CONTACT -->
       <article class="contact" data-page="contact">
-
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
@@ -481,30 +477,20 @@
           </figure>
         </section>
 
-
         <section class="contact-form">
-
           <h3 class="h3 form-title">Contact Form</h3>
-
           <form action="#" class="form" data-form>
-
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
           </form>
-
         </section>
-
       </article>
 
     </div>
@@ -550,7 +536,8 @@
         </li>
         <li class="cmd-item" data-url="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"><ion-icon
             name="logo-linkedin"></ion-icon>
-          <div><span class="cmd-item-title">LinkedIn</span><span class="cmd-item-desc">Professional profile</span></div>
+          <div><span class="cmd-item-title">LinkedIn</span><span class="cmd-item-desc">Professional profile</span>
+          </div>
         </li>
       </ul>
     </div>

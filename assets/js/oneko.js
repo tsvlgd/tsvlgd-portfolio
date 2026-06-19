@@ -59,8 +59,8 @@
     nekoEl.style.zIndex = 2147483647;
     nekoEl.style.backgroundImage = `url('./assets/images/oneko.gif')`;
     
-    // Add neon glow filter
-    nekoEl.style.filter = "drop-shadow(0 0 4px var(--orange-yellow-crayola))";
+    // Add theme-aware filter
+    nekoEl.style.filter = "var(--cat-filter, drop-shadow(0 0 4px rgba(255,255,255,0.2)))";
     
     document.body.appendChild(nekoEl);
 
