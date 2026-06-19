@@ -65,139 +65,185 @@
       <!-- ABOUT (HOMEPAGE) -->
       <article class="page-section active" data-page="about">
         
-        <!-- Hero Profile / Terminal -->
-        <div class="hero-grid">
-          <!-- Profile Block -->
-          <aside class="profile-card">
-            <figure class="profile-img-box">
+        <!-- Hero Section (Identity + About) -->
+        <div class="ramx-hero-section">
+          <!-- Identity Row -->
+          <div class="ramx-identity-row">
+            <div class="ramx-avatar-box">
               <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam">
-            </figure>
-            <div class="profile-info">
-              <h1 class="profile-name">Mehfooj Alam</h1>
-              <p class="profile-title">AI Engineer</p>
-              <p class="profile-location"><ion-icon name="location-outline"></ion-icon> Gurgaon, India</p>
-              <ul class="profile-socials">
-                <li><a href="https://github.com/tsvlgd" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li><a href="https://twitter.com/Mehfooj194108" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                <li><a href="mailto:ml.mehfooj@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
-              </ul>
             </div>
-          </aside>
-          <!-- Terminal Hero Card -->
-          <section class="hero-terminal">
-            <div class="terminal-content">
-              <div class="terminal-prompt"><span>&gt; whoami</span></div>
-              <h2 class="terminal-title">engineer, builder, learner.</h2>
-              <div class="terminal-body">
-                <p>building ai applications, intelligence platforms, and backend systems.</p>
-                <p>learning by doing,<br>shipping by building.</p>
+            <div class="ramx-identity-info">
+              <h1 class="ramx-name">Mehfooj Alam</h1>
+              <p class="ramx-title">AI Engineer</p>
+              <p class="ramx-location"><ion-icon name="location-outline"></ion-icon> Gurgaon, India</p>
+              <div class="ramx-socials">
+                <a href="https://github.com/tsvlgd" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://twitter.com/Mehfooj194108" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="mailto:ml.mehfooj@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
               </div>
+            </div>
+          </div>
+
+          <!-- About / Terminal Row -->
+          <div class="ramx-about-text">
+            <h2 class="terminal-title">engineer, builder, learner.</h2>
+            <div class="terminal-body">
+              <p>building ai applications, intelligence platforms, and backend systems.</p>
+              <p>learning by doing, shipping by building.</p>
             </div>
             <div class="terminal-actions">
-              <button class="btn btn-primary" onclick="document.querySelector('[data-nav-link]:nth-child(3)').click()">&gt; view projects</button>
-              <a href="./assets/resume.pdf" download="resume.pdf" class="btn btn-secondary">&gt; resume.pdf</a>
+              <button class="btn btn-primary" onclick="document.querySelector('[data-nav-link]:nth-child(3)').click()">Projects</button>
+              <a href="./assets/resume.pdf" download="resume.pdf" class="btn btn-secondary">Resume</a>
             </div>
-          </section>
+          </div>
         </div>
 
-        <!-- Experience -->
-        <section class="working-on-section">
-          <h3 class="section-heading">Experience</h3>
-          <div class="working-cards-grid">
+        <!-- Experience Section -->
+        <section class="ramx-experience-section">
+          <h2 class="ramx-section-heading">Experience</h2>
+          <div class="ramx-experience-list">
             
             <!-- AiGeeks Card -->
-            <div class="work-card expandable-card active">
-              <div class="work-card-default">
-                <div class="work-card-header">
-                  <img src="./assets/images/aigeeks.png" alt="AiGeeks Logo">
-                  <div class="work-card-body">
-                    <div class="work-card-title-row">
-                      <h4>AiGeeks</h4>
-                      <div class="status-badge working"><span class="status-dot"></span> Working</div>
-                    </div>
-                    <p class="work-card-role">Software Engineer Intern</p>
-                  </div>
+            <article class="ramx-exp-item">
+              <div class="ramx-exp-row-top">
+                <div class="ramx-exp-company">
+                  <div class="ramx-exp-logo"><img src="./assets/images/aigeeks.png" alt="AiGeeks"></div>
+                  <h3 class="ramx-exp-name">AiGeeks <span class="status-badge working"><span class="status-dot"></span> Working</span></h3>
                 </div>
-                <div class="work-card-meta">
-                  <span class="work-card-date">May 2026 — Present</span>
-                </div>
+                <time class="ramx-exp-date">May 2026 — Present</time>
               </div>
-              <div class="work-card-expanded">
-                <p class="work-description">Building production-grade OSINT platform focused on entity intelligence and cross-source aggregation.</p>
-                <div class="work-tech">
+              <div class="ramx-exp-row-bottom">
+                <p class="ramx-exp-role">Software Engineer Intern</p>
+              </div>
+              <div class="ramx-exp-content">
+                <p>Building production-grade OSINT platform focused on entity intelligence and cross-source aggregation.</p>
+                <div class="ramx-exp-tech">
                   <span>Python</span><span>FastAPI</span><span>Docker</span>
                 </div>
               </div>
-            </div>
+            </article>
 
             <!-- FlyRank Card -->
-            <div class="work-card expandable-card">
-              <div class="work-card-default">
-                <div class="work-card-header">
-                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank Logo">
-                  <div class="work-card-body">
-                    <div class="work-card-title-row">
-                      <h4>FlyRank</h4>
-                      <div class="status-badge working"><span class="status-dot"></span> Working</div>
-                    </div>
-                    <p class="work-card-role">Backend AI Engineering Fellow</p>
-                  </div>
+            <article class="ramx-exp-item">
+              <div class="ramx-exp-row-top">
+                <div class="ramx-exp-company">
+                  <div class="ramx-exp-logo"><img src="./assets/images/flyrank-ai.png" alt="FlyRank"></div>
+                  <h3 class="ramx-exp-name">FlyRank <span class="status-badge working"><span class="status-dot"></span> Working</span></h3>
                 </div>
-                <div class="work-card-meta">
-                  <span class="work-card-date">Jul 2026 — Present</span>
-                </div>
+                <time class="ramx-exp-date">Jul 2026 — Present</time>
               </div>
-              <div class="work-card-expanded">
-                <p class="work-description">Developing RAG, tool-calling, and agent-based workflows with evaluation pipelines.</p>
-                <div class="work-tech">
+              <div class="ramx-exp-row-bottom">
+                <p class="ramx-exp-role">Backend AI Engineering Fellow</p>
+              </div>
+              <div class="ramx-exp-content">
+                <p>Developing RAG, tool-calling, and agent-based workflows with evaluation pipelines.</p>
+                <div class="ramx-exp-tech">
                   <span>RAG</span><span>LLMs</span><span>Agents</span>
                 </div>
               </div>
-            </div>
+            </article>
 
             <!-- Data Analytics Card -->
-            <div class="work-card expandable-card">
-              <div class="work-card-default">
-                <div class="work-card-header">
-                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire Logo">
-                  <div class="work-card-body">
-                    <div class="work-card-title-row">
-                      <h4>Data Analytics</h4>
-                    </div>
-                    <p class="work-card-role">KultureHire & Analytics</p>
-                  </div>
+            <article class="ramx-exp-item">
+              <div class="ramx-exp-row-top">
+                <div class="ramx-exp-company">
+                  <div class="ramx-exp-logo"><img src="./assets/images/kulturehire.jpeg" alt="KultureHire"></div>
+                  <h3 class="ramx-exp-name">Data Analytics</h3>
                 </div>
-                <div class="work-card-meta">
-                  <span class="work-card-date">Mar 2025 — Jun 2025</span>
+                <time class="ramx-exp-date">Mar 2025 — Jun 2025</time>
+              </div>
+              <div class="ramx-exp-row-bottom">
+                <p class="ramx-exp-role">KultureHire & Analytics</p>
+              </div>
+              <div class="ramx-exp-content">
+                <p>Building dashboards, performing analytics, and managing data projects.</p>
+                <div class="ramx-exp-tech">
+                  <span>SQL</span><span>Tableau</span><span>Python</span>
                 </div>
               </div>
-              <div class="work-card-expanded">
-                <p class="work-description">Building dashboards, performing analytics, and managing data projects.</p>
-              </div>
-            </div>
+            </article>
 
             <!-- Open Source Card -->
-            <div class="work-card expandable-card">
-              <div class="work-card-default">
-                <div class="work-card-header">
-                  <img src="./assets/images/hacktoberfest.jpeg" alt="Open Source Logo">
-                  <div class="work-card-body">
-                    <div class="work-card-title-row">
-                      <h4>Open Source</h4>
-                    </div>
-                    <p class="work-card-role">Contributions & Hackathons</p>
-                  </div>
+            <article class="ramx-exp-item">
+              <div class="ramx-exp-row-top">
+                <div class="ramx-exp-company">
+                  <div class="ramx-exp-logo"><img src="./assets/images/hacktoberfest.jpeg" alt="Open Source"></div>
+                  <h3 class="ramx-exp-name">Open Source</h3>
                 </div>
-                <div class="work-card-meta">
-                  <span class="work-card-date">2023 — Present</span>
+                <time class="ramx-exp-date">2023 — Present</time>
+              </div>
+              <div class="ramx-exp-row-bottom">
+                <p class="ramx-exp-role">Contributions & Hackathons</p>
+              </div>
+              <div class="ramx-exp-content">
+                <p>Merged PRs, generated OSS impact, and engaged with developer communities.</p>
+                <div class="ramx-exp-tech">
+                  <span>Git</span><span>OSS</span><span>Community</span>
                 </div>
               </div>
-              <div class="work-card-expanded">
-                <p class="work-description">Merged PRs, generated OSS impact, and engaged with developer communities.</p>
-              </div>
-            </div>
+            </article>
 
+          </div>
+        </section>
+
+        <!-- Blog / Writing Section -->
+        <section class="ramx-experience-section">
+          <h2 class="ramx-section-heading">Writing</h2>
+          <div class="ramx-dev-list">
+            <a href="#" class="ramx-card-link" onclick="document.querySelector('[data-nav-link]:nth-child(4)').click()">
+              <div class="ramx-card-content">
+                <time class="ramx-blog-date">May 2026</time>
+                <h3 class="ramx-card-title">The Internet Romanticized Exhaustion</h3>
+                <p class="ramx-card-desc">How hustle culture slowly destroys ambition, health, peace, and your identity.</p>
+              </div>
+              <span class="ramx-read-more">Read more <ion-icon name="arrow-forward"></ion-icon></span>
+            </a>
+          </div>
+          <div class="ramx-btn-container">
+            <button class="btn btn-secondary" onclick="document.querySelector('[data-nav-link]:nth-child(4)').click()">Show all blogs</button>
+          </div>
+        </section>
+
+        <!-- Development Section -->
+        <section class="ramx-experience-section">
+          <h2 class="ramx-section-heading">Development</h2>
+          <div class="ramx-dev-list">
+            <a href="#" class="ramx-card-link">
+              <div class="ramx-card-content">
+                <h3 class="ramx-card-title">Setup</h3>
+                <p class="ramx-card-desc">VSCode / Cursor configuration and extensions guide.</p>
+              </div>
+              <ion-icon name="arrow-forward" class="ramx-card-icon"></ion-icon>
+            </a>
+            <a href="#" class="ramx-card-link">
+              <div class="ramx-card-content">
+                <h3 class="ramx-card-title">Terminal</h3>
+                <p class="ramx-card-desc">Zsh, Starship, Fastfetch, and shell configuration.</p>
+              </div>
+              <ion-icon name="arrow-forward" class="ramx-card-icon"></ion-icon>
+            </a>
+          </div>
+        </section>
+
+        <!-- Personal Section -->
+        <section class="ramx-experience-section">
+          <h2 class="ramx-section-heading">Personal</h2>
+          <div class="ramx-dev-list">
+            <a href="#" class="ramx-card-link">
+              <div class="ramx-card-content">
+                <h3 class="ramx-card-title">Books</h3>
+                <p class="ramx-card-desc">Books that have influenced my thinking and growth.</p>
+              </div>
+              <ion-icon name="arrow-forward" class="ramx-card-icon"></ion-icon>
+            </a>
+            <a href="#" class="ramx-card-link">
+              <div class="ramx-card-content">
+                <h3 class="ramx-card-title">Movies</h3>
+                <p class="ramx-card-desc">Films and shows that have inspired and entertained me.</p>
+              </div>
+              <ion-icon name="arrow-forward" class="ramx-card-icon"></ion-icon>
+            </a>
           </div>
         </section>
 
