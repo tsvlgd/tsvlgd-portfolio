@@ -1,0 +1,15 @@
+{
+  "name": "tsvlgd-portfolio",
+  "version": "1.0.0",
+  "description": "- Single-page navigation (About, Resume, Portfolio, Media) - Responsive layout for all screen sizes - Project showcase with GitHub links - Embedded media posts (LinkedIn) - Clean, minimal UI focused on content",
+  "main": "screenshot_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^24.43.1"
+  }
+}

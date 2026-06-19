@@ -13,206 +13,199 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
 </head>
 
 <body>
-
-  <main>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-        <figure class="avatar-box" id="avatar-flip-box">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam">
-            </div>
-            <div class="flip-back">
-              <img src="./assets/images/my-avatar.png" alt="Mehfooj Avatar">
-            </div>
-          </div>
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name">Mehfooj Alam</h1>
-          <p class="title">AI Engineer</p>
-          <p class="location"><ion-icon name="location-outline"></ion-icon> Gurgaon, India</p>
-        </div>
-
-        <div class="sidebar-separator"></div>
-
-        <div class="sidebar-email">
-          <button class="copy-email-btn"
-            onclick="navigator.clipboard.writeText('ml.mehfooj@gmail.com'); const icon = this.querySelector('.email-copy-icon'); icon.name='checkmark-outline'; setTimeout(() => icon.name='copy-outline', 2000);">
-            <ion-icon name="mail-outline" class="email-icon"></ion-icon>
-            <span>ml.mehfooj@gmail.com</span>
-            <ion-icon name="copy-outline" class="email-copy-icon"></ion-icon>
-          </button>
-        </div>
-
-        <div class="sidebar-separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item"><a href="https://github.com/tsvlgd" class="social-link" target="_blank"><ion-icon
-                name="logo-github"></ion-icon></a></li>
-          <li class="social-item"><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" class="social-link"
-              target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          <li class="social-item"><a href="https://twitter.com/Mehfooj194108" class="social-link"
-              target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        </ul>
-      </div>
-
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-
-      <!-- NAVBAR -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Media</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-        </ul>
-        <div class="navbar-actions">
-          <button class="navbar-theme-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+  <div class="page-container">
+    <!-- Top Navigation -->
+    <nav class="top-navbar">
+      <div class="logo">MA_</div>
+      <ul class="nav-links">
+        <li><button class="nav-link active" data-nav-link>About</button></li>
+        <li><button class="nav-link" data-nav-link>Resume</button></li>
+        <li><button class="nav-link" data-nav-link>Portfolio</button></li>
+        <li><button class="nav-link" data-nav-link>Media</button></li>
+        <li><button class="nav-link" data-nav-link>Contact</button></li>
+        <li>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
             <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
             <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
           </button>
-          <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search">
-            <ion-icon name="search-outline"></ion-icon>
-            <span>Ctrl K</span>
-          </button>
+        </li>
+      </ul>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <ul class="mobile-drawer-list">
+        <li><button class="mobile-drawer-link active" data-nav-link>About</button></li>
+        <li><button class="mobile-drawer-link" data-nav-link>Resume</button></li>
+        <li><button class="mobile-drawer-link" data-nav-link>Portfolio</button></li>
+        <li><button class="mobile-drawer-link" data-nav-link>Media</button></li>
+        <li><button class="mobile-drawer-link" data-nav-link>Contact</button></li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- ABOUT (HOMEPAGE) -->
+      <article class="page-section active" data-page="about">
+        
+        <div class="hero-grid">
+          <!-- Profile Card -->
+          <aside class="profile-card">
+            <figure class="profile-img-box" id="avatar-flip-box">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="./assets/images/me1.jpeg" alt="Mehfooj Alam">
+                </div>
+                <div class="flip-back">
+                  <img src="./assets/images/my-avatar.png" alt="Mehfooj Avatar">
+                </div>
+              </div>
+            </figure>
+            <div class="profile-info">
+              <h1 class="profile-name">Mehfooj Alam</h1>
+              <p class="profile-role">AI Engineer</p>
+              <p class="profile-location">Gurgaon, India</p>
+            </div>
+            <ul class="profile-socials">
+              <li><a href="https://github.com/tsvlgd" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+              <li><a href="https://twitter.com/Mehfooj194108" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li><a href="https://www.linkedin.com/in/mehfooj-a-b6aa0b243" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li>
+                <button class="copy-email-btn" onclick="navigator.clipboard.writeText('ml.mehfooj@gmail.com'); const icon = this.querySelector('ion-icon'); icon.name='checkmark-outline'; setTimeout(() => icon.name='mail-outline', 2000);">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </button>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Terminal Hero Card -->
+          <section class="hero-terminal">
+            <div class="terminal-content">
+              <div class="terminal-prompt"><span>&gt; whoami</span></div>
+              <h2 class="terminal-title">engineer, builder, learner.</h2>
+              <div class="terminal-body">
+                <p>building ai applications, intelligence platforms, and backend systems.</p>
+                <p>learning by doing,<br>shipping by building.</p>
+              </div>
+            </div>
+            <div class="terminal-actions">
+              <button class="btn btn-primary" onclick="document.querySelector('[data-nav-link]:nth-child(3)').click()">&gt; view projects</button>
+              <a href="#" class="btn btn-secondary">&gt; resume.pdf</a>
+            </div>
+          </section>
         </div>
-        <!-- Mobile hamburger -->
-        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
 
-      <!-- Mobile drawer -->
-      <div class="mobile-drawer" id="mobile-drawer">
-        <ul class="mobile-drawer-list">
-          <li><button class="mobile-drawer-link active" data-nav-link>About</button></li>
-          <li><button class="mobile-drawer-link" data-nav-link>Resume</button></li>
-          <li><button class="mobile-drawer-link" data-nav-link>Portfolio</button></li>
-          <li><button class="mobile-drawer-link" data-nav-link>Media</button></li>
-          <li><button class="mobile-drawer-link" data-nav-link>Contact</button></li>
-        </ul>
-      </div>
+        <!-- What I'm Working On -->
+        <section class="working-on-section">
+          <h3 class="section-heading">What I'm Working On</h3>
+          <div class="working-cards-grid">
+            
+            <!-- AiGeeks Card -->
+            <div class="work-card expandable-card">
+              <div class="work-card-default">
+                <div class="work-card-header">
+                  <img src="./assets/images/aigeeks.png" alt="AiGeeks Logo">
+                </div>
+                <div class="work-card-body">
+                  <h4>AiGeeks</h4>
+                  <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                  <p class="work-card-role">Software Engineer Intern</p>
+                </div>
+              </div>
+              <div class="work-card-expanded">
+                <p class="work-description">Building production-grade OSINT platform focused on entity intelligence and cross-source aggregation.</p>
+                <div class="work-tech">
+                  <span>Python</span><span>FastAPI</span><span>Docker</span>
+                </div>
+              </div>
+            </div>
 
-      <!-- ABOUT -->
-      <article class="about active" data-page="about">
-        <header>
-          <h2 class="h2 article-title">About Me</h2>
-        </header>
+            <!-- FlyRank Card -->
+            <div class="work-card expandable-card">
+              <div class="work-card-default">
+                <div class="work-card-header">
+                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank Logo">
+                </div>
+                <div class="work-card-body">
+                  <h4>FlyRank</h4>
+                  <div class="status-badge working"><span class="status-dot"></span> Working</div>
+                  <p class="work-card-role">Backend AI Engineering Fellow</p>
+                </div>
+              </div>
+              <div class="work-card-expanded">
+                <p class="work-description">Developing RAG, tool-calling, and agent-based workflows with evaluation pipelines.</p>
+                <div class="work-tech">
+                  <span>RAG</span><span>LLMs</span><span>Agents</span>
+                </div>
+              </div>
+            </div>
 
-        <section class="about-text hero-text">
-          <p class="hero-identity">engineer, builder, learner.</p>
-          <div class="hero-supporting">
-            <p>building ai applications, intelligence platforms, and backend systems.</p>
-            <p>learning by doing, shipping by building.</p>
+            <!-- Data Analytics Card -->
+            <div class="work-card expandable-card">
+              <div class="work-card-default">
+                <div class="work-card-header">
+                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire Logo">
+                </div>
+                <div class="work-card-body">
+                  <h4>Data Analytics</h4>
+                  <p class="work-card-role">KultureHire & Analytics</p>
+                </div>
+              </div>
+              <div class="work-card-expanded">
+                <p class="work-description">Analyzed large-scale HR datasets, uncovering trends and building dashboards for insights.</p>
+              </div>
+            </div>
+
+            <!-- Open Source Card -->
+            <div class="work-card expandable-card">
+              <div class="work-card-default">
+                <div class="work-card-header">
+                  <img src="./assets/images/hacktoberfest.jpeg" alt="Open Source Logo">
+                </div>
+                <div class="work-card-body">
+                  <h4>Open Source</h4>
+                  <p class="work-card-role">Contributions & Hackathons</p>
+                </div>
+              </div>
+              <div class="work-card-expanded">
+                <p class="work-description">Meta PyTorch Hackathon finalist. Contributed to Open Food Facts, Layer5, CNCF.</p>
+              </div>
+            </div>
+
           </div>
         </section>
 
-        <section class="service">
-          <h3 class="h3 service-title">What I'm Working On</h3>
-
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box">
-                <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer">
-                  <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="company-logo" width="48">
-                </a>
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Backend & AI Engineering</h4>
-                <p class="service-item-text">RAG pipelines, evaluation workflows, and
-                  retrieval-backed AI applications.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer">
-                  <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="company-logo" width="48">
-                </a>
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">OSINT & CyberSecurity</h4>
-                <p class="service-item-text">Intelligence platform & CyberSecurity,
-                  cross-source data aggregation,
-                  and investigation workflows backend engineering.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer">
-                  <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="company-logo" width="48">
-                </a>
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analytics</h4>
-                <p class="service-item-text">Large-scale data analysis, dashboards, and data-driven insights for HR and
-                  recruitment.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/hacktoberfest.jpeg" class="company-logo"
-                  width="48"></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Open Source & Hackathons</h4>
-                <p class="service-item-text">OSS contributions, Meta PyTorch OpenEnv Hackathon finalist, backend
-                  patches, and infra automation.</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- OPEN SOURCE CONTRIBUTIONS & HACKATHONS -->
-        <section class="service">
-          <h3 class="h3 service-title">Open Source Contributions & Hackathons</h3>
-          <div class="about-text">
-            <p>
-              contributed to Open Food Facts, Layer5, Cncf, and Recode Hive.
-              Focused on giving patches, SDK, Docker, CI/CD.
-
-              Meta PyTorch OpenEnv Hackathon x Scaler solo entry cleared Phase 2 deep validation.
-            </p>
-          </div>
-        </section>
       </article>
 
       <!-- RESUME -->
-      <article class="resume" data-page="resume">
+      <article class="page-section" data-page="resume">
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="section-heading">Resume</h2>
         </header>
 
         <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+          <div class="timeline-title-wrapper">
             <h3 class="h3">Experience</h3>
           </div>
 
           <ol class="timeline-list">
-
-            <!-- Software Engineer Intern — AiGeeks -->
+            <!-- AiGeeks -->
             <li class="timeline-item" data-accordion>
               <div class="timeline-header">
                 <div class="timeline-header-left">
                   <img src="./assets/images/aigeeks.png" alt="AiGeeks" class="timeline-logo">
                   <div>
                     <h4 class="h4 timeline-item-title">Software Engineer Intern</h4>
-                    <a href="https://aigeeks.ae" target="_blank" rel="noopener noreferrer"
-                      class="timeline-company-link">AiGeeks</a>
+                    <a href="https://aigeeks.ae" target="_blank" class="timeline-company-link">AiGeeks</a>
                   </div>
                 </div>
                 <div class="timeline-header-right">
@@ -223,14 +216,9 @@
               </div>
               <div class="timeline-body">
                 <p class="timeline-text">
-                  • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows,
-                  and cross-source data aggregation.<br>
-                  • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL,
-                  and Docker.<br>
-                  • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems
-                  for real-world investigations.<br>
-                  • Collaborating on infrastructure, automation, and deployment architecture for high-availability
-                  backend services.
+                  • Building a production-grade OSINT platform focused on entity intelligence, investigation workflows, and cross-source data aggregation.<br>
+                  • Developing backend services, APIs, and data pipelines using Python, FastAPI, MERN, PostgreSQL, and Docker.<br>
+                  • Designing scalable intelligence workflows, structured outputs, and reliable data processing systems.
                 </p>
                 <div class="tech-stack">
                   <span>Python</span><span>FastAPI</span><span>MERN</span><span>PostgreSQL</span><span>Docker</span><span>OSINT</span>
@@ -238,15 +226,14 @@
               </div>
             </li>
 
-            <!-- Backend AI Engineering Fellow — FlyRank AI -->
+            <!-- FlyRank AI -->
             <li class="timeline-item" data-accordion>
               <div class="timeline-header">
                 <div class="timeline-header-left">
                   <img src="./assets/images/flyrank-ai.png" alt="FlyRank AI" class="timeline-logo">
                   <div>
                     <h4 class="h4 timeline-item-title">Backend AI Engineering Fellow</h4>
-                    <a href="https://www.flyrank.com" target="_blank" rel="noopener noreferrer"
-                      class="timeline-company-link">FlyRank AI</a>
+                    <a href="https://www.flyrank.com" target="_blank" class="timeline-company-link">FlyRank AI</a>
                   </div>
                 </div>
                 <div class="timeline-header-right">
@@ -257,30 +244,24 @@
               </div>
               <div class="timeline-body">
                 <p class="timeline-text">
-                  • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines
-                  focused on reliability and correctness.<br>
-                  • Designing API contracts, validation layers, and backend workflows for production-oriented
-                  AI systems.<br>
-                  • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding, failure
-                  handling, and auditability.<br>
-                  • Creating evaluation datasets, quality rubrics, and verification processes to assess AI system
-                  performance and limitations.
+                  • Building retrieval-backed AI applications, structured-output workflows, and evaluation pipelines.<br>
+                  • Designing API contracts, validation layers, and backend workflows for production-oriented AI systems.<br>
+                  • Developing RAG, tool-calling, and agent-based workflows with an emphasis on grounding and auditability.
                 </p>
                 <div class="tech-stack">
-                  <span>RAG</span><span>LLMs</span><span>Evaluation</span><span>Structured Outputs</span><span>Agent Workflows</span><span>APIs</span>
+                  <span>RAG</span><span>LLMs</span><span>Evaluation</span><span>Structured Outputs</span><span>Agent Workflows</span>
                 </div>
               </div>
             </li>
 
-            <!-- Data Analyst — KultureHire -->
+            <!-- KultureHire -->
             <li class="timeline-item" data-accordion>
               <div class="timeline-header">
                 <div class="timeline-header-left">
                   <img src="./assets/images/kulturehire.jpeg" alt="KultureHire" class="timeline-logo">
                   <div>
                     <h4 class="h4 timeline-item-title">Data Analyst</h4>
-                    <a href="https://kulturehire.com" target="_blank" rel="noopener noreferrer"
-                      class="timeline-company-link">KultureHire</a>
+                    <a href="https://kulturehire.com" target="_blank" class="timeline-company-link">KultureHire</a>
                   </div>
                 </div>
                 <div class="timeline-header-right">
@@ -290,26 +271,19 @@
               </div>
               <div class="timeline-body">
                 <p class="timeline-text">
-                  • Analyzed large-scale HR and recruitment datasets to uncover trends related to hiring, retention, and
-                  candidate performance.<br>
-                  • Built structured analyses and dashboards to translate raw data into actionable insights for
-                  stakeholders.<br>
-                  • Supported data-driven decision-making by identifying patterns and presenting findings in a clear,
-                  business-oriented manner.
+                  • Analyzed large-scale HR and recruitment datasets to uncover trends related to hiring and retention.<br>
+                  • Built structured analyses and dashboards to translate raw data into actionable insights.<br>
+                  • Supported data-driven decision-making by identifying patterns.
                 </p>
               </div>
             </li>
-
           </ol>
         </section>
 
-        <!-- EDUCATION -->
         <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+          <div class="timeline-title-wrapper">
             <h3 class="h3">Education</h3>
           </div>
-
           <ol class="timeline-list">
             <li class="timeline-item" data-accordion>
               <div class="timeline-header">
@@ -317,8 +291,7 @@
                   <img src="./assets/images/mdu.png" alt="MDU" class="timeline-logo">
                   <div>
                     <h4 class="h4 timeline-item-title">B.Tech, CS Engineering (Data Science)</h4>
-                    <a href="https://mdu.ac.in/" target="_blank" rel="noopener noreferrer"
-                      class="timeline-company-link">Maharshi Dayanand University</a>
+                    <a href="https://mdu.ac.in/" target="_blank" class="timeline-company-link">Maharshi Dayanand University</a>
                   </div>
                 </div>
                 <div class="timeline-header-right">
@@ -328,10 +301,8 @@
               </div>
               <div class="timeline-body">
                 <p class="timeline-text">
-                  • Undergraduate coursework focused on computer science fundamentals, data structures, algorithms, and
-                  software engineering.<br>
-                  • Developing a strong foundation in machine learning, data analysis, and applied artificial intelligence
-                  through academic and practical work.
+                  • Undergraduate coursework focused on computer science fundamentals, data structures, algorithms.<br>
+                  • Developing a strong foundation in machine learning, data analysis, and applied artificial intelligence.
                 </p>
               </div>
             </li>
@@ -340,95 +311,83 @@
       </article>
 
       <!-- PORTFOLIO -->
-      <article class="portfolio" data-page="portfolio">
+      <article class="page-section" data-page="portfolio">
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="section-heading">Projects</h2>
         </header>
 
         <section class="projects">
-          <ul class="project-list">
+          <ul class="project-grid">
 
-            <!-- LogIQ -->
-            <li class="project-item active" data-filter-item data-category="machine learning">
+            <li class="project-card">
               <a href="https://github.com/tsvlgd/LogIQ" target="_blank">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/logiq.png" alt="LogIQ" loading="lazy">
                 </figure>
-                <h3 class="project-title">LogIQ – Hybrid Log Classification</h3>
-                <p class="project-category">NLP / LLM Systems</p>
+                <div class="project-info">
+                  <h3 class="project-title">LogIQ – Hybrid Log Classification</h3>
+                  <p class="project-category">NLP / LLM Systems</p>
+                </div>
               </a>
             </li>
 
-            <!-- Full Stack ML -->
-            <li class="project-item active" data-filter-item data-category="machine learning">
+            <li class="project-card">
               <a href="https://github.com/tsvlgd/Telco-Customer-Churn-ML" target="_blank">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/full-stack_ml.webp" alt="Full Stack ML" loading="lazy">
                 </figure>
-                <h3 class="project-title">Full Stack ML – Customer Churn</h3>
-                <p class="project-category">MLOps / Production ML</p>
+                <div class="project-info">
+                  <h3 class="project-title">Full Stack ML – Customer Churn</h3>
+                  <p class="project-category">MLOps / Production ML</p>
+                </div>
               </a>
             </li>
 
-            <!-- GPT -->
-            <li class="project-item active" data-filter-item data-category="machine learning">
+            <li class="project-card">
               <a href="https://github.com/tsvlgd/gpt-from-scratch" target="_blank">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/gpt.webp" alt="GPT Transformer" loading="lazy">
                 </figure>
-                <h3 class="project-title">GPT From Scratch</h3>
-                <p class="project-category">Deep Learning / Transformers</p>
+                <div class="project-info">
+                  <h3 class="project-title">GPT From Scratch</h3>
+                  <p class="project-category">Deep Learning / Transformers</p>
+                </div>
               </a>
             </li>
 
-            <!-- CNN -->
-            <li class="project-item active" data-filter-item data-category="machine learning">
+            <li class="project-card">
               <a href="https://github.com/tsvlgd/MLE" target="_blank">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/star-history-2026129.png" alt="CNN Image Classification" loading="lazy">
                 </figure>
-                <h3 class="project-title">CNN Image Classification</h3>
-                <p class="project-category">Deep Learning</p>
+                <div class="project-info">
+                  <h3 class="project-title">CNN Image Classification</h3>
+                  <p class="project-category">Deep Learning</p>
+                </div>
               </a>
             </li>
 
-            <!-- Customer Segmentation -->
-            <li class="project-item active" data-filter-item data-category="data science">
+            <li class="project-card">
               <a href="https://github.com/tsvlgd/unsupervised-customer-segmentation" target="_blank">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/unsupervised.png" alt="Customer Segmentation" loading="lazy">
                 </figure>
-                <h3 class="project-title">Customer Segmentation</h3>
-                <p class="project-category">Data Science</p>
+                <div class="project-info">
+                  <h3 class="project-title">Customer Segmentation</h3>
+                  <p class="project-category">Data Science</p>
+                </div>
               </a>
             </li>
 
-            <!-- KultureHire -->
-            <li class="project-item active" data-filter-item data-category="data science">
+            <li class="project-card">
               <a href="https://kulturehire.com/portfolio/mehfooj-alam" target="_blank">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/kulturehireportfolio.png" alt="KultureHire Portfolio" loading="lazy">
                 </figure>
-                <h3 class="project-title">KultureHire Analytics</h3>
-                <p class="project-category">Data Analytics</p>
+                <div class="project-info">
+                  <h3 class="project-title">KultureHire Analytics</h3>
+                  <p class="project-category">Data Analytics</p>
+                </div>
               </a>
             </li>
 
@@ -437,72 +396,64 @@
       </article>
 
       <!-- MEDIA -->
-      <article class="media" data-page="media">
+      <article class="page-section" data-page="media">
         <header>
-          <h2 class="h2 article-title">Media</h2>
+          <h2 class="section-heading">Media</h2>
         </header>
 
         <section class="media-posts">
-          <ul class="media-posts-list">
-            <li class="media-post-item">
-              <div class="media-content">
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7375788866231984128"
-                  height="814" width="504" frameborder="0" allowfullscreen title="LinkedIn post">
-                </iframe>
-              </div>
+          <ul class="media-grid">
+            <li class="media-card">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7375788866231984128" height="814" width="100%" frameborder="0" allowfullscreen title="LinkedIn post"></iframe>
             </li>
-            <li class="media-post-item">
-              <div class="media-content">
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398467749884227584"
-                  height="898" width="504" frameborder="0" allowfullscreen title="LinkedIn post">
-                </iframe>
-              </div>
+            <li class="media-card">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398467749884227584" height="898" width="100%" frameborder="0" allowfullscreen title="LinkedIn post"></iframe>
             </li>
           </ul>
         </section>
       </article>
 
       <!-- CONTACT -->
-      <article class="contact" data-page="contact">
+      <article class="page-section" data-page="contact">
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="section-heading">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9510331089!2d76.76355216407127!3d28.64428734722473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1738147200000"
-              width="400" height="300" loading="lazy">
-            </iframe>
-          </figure>
-        </section>
+        <div class="contact-grid">
+          <section class="mapbox">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9510331089!2d76.76355216407127!3d28.64428734722473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1738147200000" width="100%" height="100%" loading="lazy"></iframe>
+          </section>
 
-        <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="#" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
+          <section class="contact-form-section">
+            <form action="#" class="contact-form" data-form>
+              <div class="input-group">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <button class="btn btn-primary btn-submit" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </div>
       </article>
 
-    </div>
-  </main>
+    </main>
+  </div>
 
-  <!-- COMMAND PALETTE -->
+  <!-- COMMAND PALETTE / SEARCH -->
+  <button class="floating-search-btn" id="navbar-search-btn" aria-label="Search">
+    <ion-icon name="search-outline"></ion-icon>
+    <span class="shortcut">Ctrl K</span>
+  </button>
+
   <div id="cmd-palette-overlay" class="cmd-overlay">
     <div class="cmd-modal">
       <div class="cmd-input-wrapper">
         <ion-icon name="search-outline" class="cmd-search-icon"></ion-icon>
-        <input type="text" id="cmd-input" class="cmd-input" placeholder="Type a command or search..."
-          autocomplete="off">
+        <input type="text" id="cmd-input" class="cmd-input" placeholder="Type a command or search..." autocomplete="off">
         <kbd class="cmd-kbd">ESC</kbd>
       </div>
       <div class="cmd-separator"></div>
@@ -534,10 +485,8 @@
         <li class="cmd-item" data-url="https://github.com/tsvlgd"><ion-icon name="logo-github"></ion-icon>
           <div><span class="cmd-item-title">GitHub</span><span class="cmd-item-desc">View repositories</span></div>
         </li>
-        <li class="cmd-item" data-url="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"><ion-icon
-            name="logo-linkedin"></ion-icon>
-          <div><span class="cmd-item-title">LinkedIn</span><span class="cmd-item-desc">Professional profile</span>
-          </div>
+        <li class="cmd-item" data-url="https://www.linkedin.com/in/mehfooj-a-b6aa0b243"><ion-icon name="logo-linkedin"></ion-icon>
+          <div><span class="cmd-item-title">LinkedIn</span><span class="cmd-item-desc">Professional profile</span></div>
         </li>
       </ul>
     </div>
@@ -548,7 +497,5 @@
   <script src="./assets/js/cmd-palette.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
