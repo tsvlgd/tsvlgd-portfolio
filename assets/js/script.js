@@ -222,3 +222,22 @@ if (quoteText && quoteAuthor) {
     }, 400); // Wait for transition
   }, 6000); // Rotate every 6 seconds
 }
+
+/* ---------- Experience Accordion ---------- */
+const workCards = document.querySelectorAll('.work-card');
+if (workCards.length > 0) {
+  workCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 1024) {
+        workCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      }
+    });
+    card.addEventListener('click', () => {
+      if (window.innerWidth <= 1024) {
+        workCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      }
+    });
+  });
+}

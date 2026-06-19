@@ -35,7 +35,7 @@
           </button>
         </li>
         <li>
-          <button class="navbar-search-btn floating-search-btn" id="navbar-search-btn" aria-label="Search" style="position: static; margin-left: 10px;">
+          <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search">
             <ion-icon name="search-outline"></ion-icon>
             <span>Ctrl K</span>
           </button>
@@ -105,7 +105,7 @@
             </div>
             <div class="terminal-actions">
               <button class="btn btn-primary" onclick="document.querySelector('[data-nav-link]:nth-child(3)').click()">&gt; view projects</button>
-              <a href="#" class="btn btn-secondary">&gt; resume.pdf</a>
+              <a href="./assets/resume.pdf" download="resume.pdf" class="btn btn-secondary">&gt; resume.pdf</a>
             </div>
           </section>
         </div>
@@ -116,7 +116,7 @@
           <div class="working-cards-grid">
             
             <!-- AiGeeks Card -->
-            <div class="work-card expandable-card">
+            <div class="work-card expandable-card active">
               <div class="work-card-default">
                 <div class="work-card-header">
                   <img src="./assets/images/aigeeks.png" alt="AiGeeks Logo">
@@ -483,11 +483,6 @@
   </div>
 
   <!-- COMMAND PALETTE / SEARCH -->
-  <button class="floating-search-btn" id="navbar-search-btn" aria-label="Search">
-    <ion-icon name="search-outline"></ion-icon>
-    <span class="shortcut">Ctrl K</span>
-  </button>
-
   <div id="cmd-palette-overlay" class="cmd-overlay">
     <div class="cmd-modal">
       <div class="cmd-input-wrapper">
